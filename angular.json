@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Flexnet-angular"
+    }
+  },
+  "defaultProject": "Flexnet-angular",
+  "cli": {
+    "analytics": "1383ea91-ee50-4dcc-8e74-a9fd7405f0b9"
+  }
 }
