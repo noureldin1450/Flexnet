@@ -1,0 +1,59 @@
+@import "../../../../assets/style/scss/global";
+
+.nav {
+    width: 30%;
+    margin-top: 2rem;
+    max-width: 80px;
+    background-color: $light-black-color;
+    position: fixed;
+    border-radius: $normal-radius;
+    text-align: center;
+    box-shadow: 8px 3px 10px rgba(0, 0, 0, 0.25);
+   
+    &__logo {
+        width: 100%;
+        margin: 0px auto;
+        padding: 1.7rem 0px;
+        background: $dark-pink;
+        border-top-left-radius: $normal-radius;
+        border-top-right-radius: $normal-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            height: 35px;
+            width: 50px;
+            display: block;
+            background-image: url("/assets/logo.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } //the main img tag for the logo
+    } //the main logo part
+
+    &__links {
+        li {
+            margin-bottom: 2.5rem;
+
+            &:first-of-type{
+                margin-top: 2.5rem;
+            }
+        }
+        .ion-icon {
+            transform: scale(1.2);
+            opacity: 0.7;
+            transition: .4s;
+            &:hover{
+                transform: scale(1.5);
+                transition: .4s;
+                fill: $light-pink;
+            }
+        } //all the icons inside the nav
+        
+        .active {
+            fill: $mid-pink;
+            opacity: 1;
+        }
+    }
+} //the nav element

@@ -1,0 +1,45 @@
+
+
+
+# additional important 
+
+[x] theme colors 
+[x] theme fonts
+[x] design icons 
+
+# things to do before deployment
+[ ] add google analytics
+[ ] add the code to the main repo 
+
+# Main Site build block
+
+[o] Nav
+    - logo
+    [] nav links
+        - hover state
+
+
+[ ] Tags section
+    [ ] make it responsive
+    [x] get the data
+    [x] add styles
+    [x] custome the scrollbar
+     [-] or make it a slider
+
+[ ] Header big slider(box office)
+    [ ] add the slider library
+    [ ] add the world box office in the backend
+        [ ] add some of the box office movie for the year
+
+[ ] Search
+
+[ ] Movies sliders
+
+[ ] Random movie section
+
+[ ] support section
+
+[ ] newsetter section
+
+[ ] make the other pages
+

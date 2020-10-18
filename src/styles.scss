@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/style/scss/global';
+
+
+.container{
+    width: 95%;
+    margin: 0px auto;
+}
+.ion-icon{
+    fill: $white-color;
+    width: 30px;
+    height: 30px;
+}
+.main{
+    width: calc(100% - 100px); //the 100px is the nav max-width number
+    float: right;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    display: none !important;
+}
