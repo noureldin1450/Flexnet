@@ -1,0 +1,29 @@
+@import '../../../assets/style/scss/global';
+
+.card{
+    height: 60vh !important;
+    min-height: 400px !important;
+    max-height: 450px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $normal-radius;
+
+    @include tap{
+        max-height: 300px !important;
+    }
+}
+
+.ng-lazyloading {
+    opacity: .4;
+    transform: translateY(-16px);
+}
+.ng-lazyloaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+    transition-delay: .5s;
+}
+.slider-title{
+    padding: 1rem 0px .7rem 0px !important;
+}

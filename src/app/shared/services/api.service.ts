@@ -18,6 +18,10 @@ export class ApiService {
     return this.http.get(`${this.HEADERS}${this.APIURL}movies.json`);
   }
 
+  BoxofficeMovies(year:number) {
+    return this.http.get(`${this.HEADERS}${this.APIURL}/boxoffices/${year}/index.json`);
+  }
+
   //the genra list 
   GenraData() {
     return this.http.get(`${this.HEADERS}${this.APIURL}tags.json`);

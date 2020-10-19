@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { SwiperModule, SwiperConfigInterface, SwiperConfig } from 'ngx-swiper-wrapper';
-
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { RouterModule } from '@angular/router';
 
 
 const DEFAULT_SWIPER_CONFIG:SwiperConfigInterface = {
@@ -14,7 +15,9 @@ const DEFAULT_SWIPER_CONFIG:SwiperConfigInterface = {
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
-    SwiperModule
+    SwiperModule,
+    LazyLoadImageModule,
+    RouterModule
   ],
   exports:[
     HeaderComponent

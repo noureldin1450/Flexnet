@@ -1,13 +1,7 @@
 
 <header>
-    <h1>{{ title }}</h1>
+    <h1 class="slider-title">{{ title }}</h1>
     <swiper [config]="config">
-        <a class="card">
-            somthing
-        </a>
+        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover"></a>
     </swiper>
 </header>
-
-<h3>
-    {{ MoviesData | json }} 
-</h3>
