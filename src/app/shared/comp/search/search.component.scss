@@ -1,0 +1,91 @@
+@import "../../../../assets/style/scss/global";
+
+.search {
+    width: 100%;
+    border: 1px solid $lighter-black-color;
+    border-radius: $normal-radius;
+    margin: 1.7rem 0px 0px 0px;
+    height: 35px;
+
+    input,
+    button {
+        border: none;
+        background: none;
+        height: 35px;
+    }
+
+    input {
+        width: 92%;
+        min-width: 200px;
+        float: left;
+        opacity: 0.9;
+        transition: 0.5s;
+        color: $white-color;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: $mainfont;
+
+        @include small-laptop {
+            width: 80%;
+        }
+        @include mobile {
+            font-size: 1rem;
+        }
+        @include small-mobile {
+            width: 75%;
+        }
+        @include mini-mobile{
+            font-size: 1rem;
+        }
+
+        &::placeholder {
+            color: $white-color;
+            font-weight: 800;
+            font-size: 1rem;
+        }
+        &::content {
+            padding-left: 1rem;
+        }
+        &:focus {
+            opacity: 1;
+            border: 2px solid $white-color;
+            border-radius: $normal-radius;
+            outline: none;
+            transition: 0.5s;
+
+            @include small-mobile{
+                border: none;
+            }
+        }
+    } //input
+
+    button {
+        background: $dark-pink-color;
+        float: right;
+        padding: 0px 0.5rem;
+        width: 5%;
+        border-radius: 0 $normal-radius $normal-radius 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @include small-laptop {
+            width: 7%;
+        }
+        @include small-laptop {
+            width: 10%;
+        }
+        @include small-mobile {
+            width: 15%;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        .ion-icon {
+            width: 25px;
+        } //icon
+    } //button
+} //the .search

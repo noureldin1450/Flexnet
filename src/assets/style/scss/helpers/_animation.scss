@@ -20,8 +20,25 @@
     animation-name: fadeIn;
 }
 
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+    animation-delay: .6s !important;
+}
+
 .animated {
-  animation-duration: 0.5s;
+  animation-duration: .7s;
   animation-fill-mode: both;
 }
 

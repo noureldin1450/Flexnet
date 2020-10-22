@@ -13,7 +13,7 @@ export class GenraListComponent implements OnInit{
   genralist:any;
 
   ngOnInit(): void {
-    this.api.GenraData().subscribe(data =>{
+    this.api.GenraList().subscribe(data =>{
       this.genralist = data;
     });
   }

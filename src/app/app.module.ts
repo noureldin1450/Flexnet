@@ -10,7 +10,7 @@ import { GenraListModule } from './shared/comp/genra-list/genra-list.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,

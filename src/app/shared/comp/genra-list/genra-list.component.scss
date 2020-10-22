@@ -1,9 +1,11 @@
 @import '../../../../assets/style/scss/global';
 
+
 .keywords{
     margin-top: 2.1rem;
     width: max-content;
-    padding: 0px 0px 1rem 0px;
+    padding: 1rem 0px;
+    margin-top: 1rem !important;
     
     li{
         display: inline-block;
@@ -17,6 +19,16 @@
             font-size: 1.1rem;
             font-weight: 900;
             border-radius: 5px;
+
+            @include small-tap{
+                font-size: 1rem;
+            }
+            @include mobile{
+                font-size: .9rem;
+            }
+            @include mini-mobile{
+                font-size: 14px;
+            }
             
             &:last-of-type{
                 margin-right: 0px;

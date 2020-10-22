@@ -1,3 +1,14 @@
 
 
 <app-header title="Flexnet Top Movies" [MoviesData]="BoxofficeMoviesData"></app-header>
+
+<app-search></app-search>
+
+
+<ng-container *ngIf="WindowSize > 500">
+    <app-wide-card  *ngFor="let slider of GenraList.tags.slice(0,5)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+</ng-container>
+
+<ng-container *ngIf="WindowSize <= 500">
+    <app-small-card *ngFor="let slider of GenraList.tags.slice(0,5)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+</ng-container>

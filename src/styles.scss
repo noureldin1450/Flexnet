@@ -1,9 +1,8 @@
 @import './assets/style/scss/global';
 
-
 .container{
     width: 95%;
-    margin: 0px auto;
+    margin: 0px auto !important;
 }
 .ion-icon{
     fill: $white-color;
@@ -18,12 +17,47 @@
         width: 100%;
     }
 }
+
+// .swiper-container-free-mode > .swiper-wrapper {
+//     padding-top: 20px !important;
+// }
+
 .swiper-button-next,
-.swiper-button-prev{
+.swiper-button-prev {
     display: none !important;
 }
-.slider-title{
+
+.slider-title {
     font-size: 1.7rem;
     font-weight: 500;
     padding-bottom: .7rem 0px !important;
+
+    @include tap{
+        font-weight: 600;
+        margin-top: .3rem !important;
+    }
+
+    @include mobile{
+        font-size: 1.5rem;
+    }
+
+    @include small-mobile{
+        font-size: 1.3rem;
+    }
+}
+
+.ng-lazyloading {
+    opacity: 0.4;
+    transform: translateY(-16px);
+}
+
+.ng-lazyloaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .8s, transform .5s !important;
+    transition-delay: .3s !important;
+}
+
+.slider-title {
+    padding: 1rem 0px 0.7rem 0px !important;
 }

@@ -1,0 +1,15 @@
+
+<form *ngIf="Slugs" class="search">
+    
+    <input [(ngModel)]="moviename" list="movies-names" name="search" type="text" placeholder="Movie Name" title="Add your movie name to search">
+
+    <button (click)="search()">
+        <svg class="ion-icon">
+            <use href="assets/icons.svg#icon-search"></use>
+        </svg>
+    </button>
+
+    <datalist id="movies-names">
+        <option *ngFor="let slug of Slugs.slugs" [value]="slug"></option>
+    </datalist>
+</form>

@@ -13,17 +13,3 @@
         max-height: 300px !important;
     }
 }
-
-.ng-lazyloading {
-    opacity: .4;
-    transform: translateY(-16px);
-}
-.ng-lazyloaded {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s;
-    transition-delay: .5s;
-}
-.slider-title{
-    padding: 1rem 0px .7rem 0px !important;
-}

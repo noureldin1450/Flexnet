@@ -1,0 +1,41 @@
+@import "../../../../assets/style/scss/global";
+
+.card {
+    height: 230px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $normal-radius;
+
+    &__info {
+        background: linear-gradient(11.82deg, #090101 6.56%, rgba(45, 45, 45, 0) 86.58%);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        h2{
+            font-weight: 500;
+            margin-bottom: .3rem;
+            color: $white-color;
+            opacity: .9;
+        }
+
+        li {
+            display: inline-flex;
+            align-items: center;
+            margin-right: .7rem;
+            color: $mid-pink-color;
+            font-size: .9rem;
+            font-weight: 600;
+
+            .ion-icon{
+                width: 17px;
+                margin-right: .3rem;
+                fill: $mid-pink-color;
+            }
+        }
+    }
+}

@@ -23,8 +23,18 @@ export class ApiService {
   }
 
   //the genra list 
-  GenraData() {
+  GenraData(genra:string) {
+    return this.http.get(`${this.HEADERS}${this.APIURL}tags/${genra}/index.json`);
+  }
+
+  //the genra list 
+  GenraList() {
     return this.http.get(`${this.HEADERS}${this.APIURL}tags.json`);
+  }
+
+  //the slugs for the search
+  SlugsData(){
+    return this.http.get(`${this.HEADERS}${this.APIURL}slugs.json`);
   }
 
 }

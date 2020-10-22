@@ -18,7 +18,7 @@
         width: 100%;
         margin: 0px auto;
         padding: 1.7rem 0px;
-        background: $dark-pink;
+        background: $dark-pink-color;
         border-top-left-radius: $normal-radius;
         border-top-right-radius: $normal-radius;
         display: flex;
@@ -51,12 +51,12 @@
             &:hover{
                 transform: scale(1.5);
                 transition: .4s;
-                fill: $light-pink;
+                fill: $light-pink-color;
             }
         } //all the icons inside the nav
         
         .active {
-            fill: $mid-pink;
+            fill: $mid-pink-color;
             opacity: 1;
         }
     }

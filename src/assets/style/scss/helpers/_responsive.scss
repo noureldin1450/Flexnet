@@ -5,12 +5,21 @@
 */
 
 $laptop:  1100px;
-$tap:  708px;
+$small-laptop:  950px;
+$tap:  700px;
+$small-tap:  600px;
 $mobile:  550px;
-$small-mobile:  480px;
+$mid-mobile:  480px;
+$small-mobile:  400px;
+$mini-mobile:  350px;
 
 @mixin laptop {
     @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+@mixin small-laptop {
+    @media (max-width: #{$small-laptop}) {
         @content;
     }
 }
@@ -19,13 +28,28 @@ $small-mobile:  480px;
         @content;
     }
 }
+@mixin small-tap {
+    @media (max-width: #{$small-tap}) {
+        @content;
+    }
+}
 @mixin mobile {
     @media (max-width: #{$mobile}) {
         @content;
     }
 }
+@mixin mid-mobile {
+    @media (max-width: #{$mid-mobile}) {
+        @content;
+    }
+}
 @mixin small-mobile {
     @media (max-width: #{$small-mobile}) {
+        @content;
+    }
+}
+@mixin mini-mobile {
+    @media (max-width: #{$mini-mobile}) {
         @content;
     }
 }

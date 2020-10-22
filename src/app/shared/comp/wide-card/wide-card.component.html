@@ -1,0 +1,26 @@
+<section *ngIf="MoviesData">
+    <h1 class="slider-title">{{ title }}</h1>
+    <swiper [config]="config">
+        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviebg">
+            <div class="card__info">
+                <div class="container">
+                    <h2>{{ movie.title | truncate:[25] }}</h2>
+                    <ul>
+                        <li>
+                            <svg class="ion-icon">
+                                <use href="assets/icons.svg#icon-star"></use>
+                            </svg>
+                            {{ movie.rating }}
+                        </li>
+                        <li>
+                            <svg class="ion-icon">
+                                <use href="assets/icons.svg#icon-time"></use>
+                            </svg>
+                            {{ movie.duration }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+    </swiper>
+</section>
