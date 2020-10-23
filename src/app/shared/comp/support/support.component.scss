@@ -1,0 +1,81 @@
+@import "../../../../assets/style/scss/global";
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3,
+.ion-icon {
+    fill: $white-color;
+    color: $white-color;
+}
+h3,
+.btn {
+    @include small-laptop {
+        font-size: 0.9rem !important;
+    }
+}
+
+.support {
+    margin: 0 auto;
+    border-radius: $normal-radius;
+    margin: 1rem 0px;
+    background-color: $light-black-color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 2rem;
+
+        @include small-laptop {
+            padding: 0.5 1rem;
+            display: block;
+        }
+
+        h3 {
+            display: inline-flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 600;
+
+            @include small-laptop {
+                width: 100%;
+                text-align: center;
+            }
+
+            .ion-icon {
+                width: 20px;
+                margin-left: 0.3rem;
+
+                @include tap{
+                    display: none;
+                }
+            } //icon
+        } //the title
+
+        .btn {
+            margin-left: 1rem;
+            background: $white-color;
+            color: $black-color;
+            padding: 0.3rem 2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-radius: $small-radius;
+
+            @include small-laptop {
+                display: block;
+                margin: 0.5rem auto;
+                text-align: center;
+                max-width: 100px;
+            }
+        }
+    } //the main container
+} //support div

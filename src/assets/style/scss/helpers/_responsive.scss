@@ -6,6 +6,7 @@
 
 $laptop:  1100px;
 $small-laptop:  950px;
+$large-tap:  800px;
 $tap:  700px;
 $small-tap:  600px;
 $mobile:  550px;
@@ -20,6 +21,11 @@ $mini-mobile:  350px;
 }
 @mixin small-laptop {
     @media (max-width: #{$small-laptop}) {
+        @content;
+    }
+}
+@mixin large-tap {
+    @media (max-width: #{$large-tap}) {
         @content;
     }
 }

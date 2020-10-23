@@ -1,7 +1,7 @@
 <section *ngIf="MoviesData">
     <h1 class="slider-title">{{ title }}</h1>
     <swiper [config]="config">
-        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviebg">
+        <a *ngFor="let movie of MoviesData.slice(0, amount || 20)" class="card" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviebg">
             <div class="card__info">
                 <div class="container">
                     <h2>{{ movie.title | truncate:[25] }}</h2>

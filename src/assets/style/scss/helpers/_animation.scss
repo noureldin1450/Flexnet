@@ -36,6 +36,22 @@
     animation-name: fadeInRight;
     animation-delay: .6s !important;
 }
+@keyframes support{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+.supportAnim {
+    animation-name: support;
+    animation-delay: 5s !important;
+}
 
 .animated {
   animation-duration: .7s;

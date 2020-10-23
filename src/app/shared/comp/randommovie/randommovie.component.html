@@ -1,0 +1,80 @@
+<section *ngIf="show === true">
+    <div class="movie" *ngFor="let moviedata of movie">
+
+        <div class="movie__info" id="small">
+            <div class="container">
+                <h2>{{ moviedata.title | truncate:[25] }}</h2>
+                <ul class="basic">
+                    <li>
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-star"></use>
+                        </svg>
+                        {{ moviedata.rating }}/10
+                    </li>
+                    <li>
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-time"></use>
+                        </svg>
+                        {{ moviedata.duration }}
+                    </li>
+                    <li *ngIf="moviedata.pg">
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-pg"></use>
+                        </svg>
+                        PG-{{ moviedata.pg }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="movie__poster" [lazyLoad]="moviedata.moviecover">
+            <a [routerLink]="moviedata.slug" class="overlay">
+                <svg class="ion-icon"><use href="/assets/icons.svg#icon-play"></use></svg>
+            </a>
+        </div>
+
+        <div class="movie__info">
+            <div class="container">
+                <h2>{{ moviedata.title | truncate:[25] }}</h2>
+                <ul class="basic">
+                    <li>
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-star"></use>
+                        </svg>
+                        {{ moviedata.rating }}/10
+                    </li>
+                    <li>
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-time"></use>
+                        </svg>
+                        {{ moviedata.duration }}
+                    </li>
+                    <li *ngIf="moviedata.pg">
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-pg"></use>
+                        </svg>
+                        PG-{{ moviedata.pg }}
+                    </li>
+                </ul>
+                <ul class="genras">
+                    <li *ngFor="let genra of moviedata.tags">
+                        <a [routerLink]="'/genra/'+genra">{{ genra }}</a>
+                    </li>
+                </ul>
+                <p>
+                    {{ moviedata.story | truncate:[160] }}
+                </p>
+
+                <div class="btn">
+                    <a [routerLink]="moviedata.slug">
+                        <svg class="ion-icon"><use href="/assets/icons.svg#icon-play"></use></svg>
+                        <span>
+                            Watch Now
+                        </span>
+                    </a>
+                    <a [routerLink]="moviedata.slug">More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

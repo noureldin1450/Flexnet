@@ -1,0 +1,7 @@
+<ng-container *ngIf="WindowSize > 500">
+    <app-wide-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-wide-card>
+</ng-container>
+
+<ng-container *ngIf="WindowSize <= 500">
+    <app-small-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-small-card>
+</ng-container>

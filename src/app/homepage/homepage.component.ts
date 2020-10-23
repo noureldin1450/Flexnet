@@ -11,18 +11,11 @@ export class HomepageComponent implements OnInit {
 
   constructor(public api:ApiService) { }
 
-  ngOnInit(): void {
-    this.api.BoxofficeMovies(2020).subscribe(data =>{
-      this.BoxofficeMoviesData = data;
-    });
-
-    this.api.GenraList().subscribe(data =>{
-      this.GenraList = data;
-    })
-  }
-
   GenraList:any;
   BoxofficeMoviesData:any;
+
+  LatestMovies:any;
+  RandomNumber:number = Math.floor((Math.random() * 49) - 1);
 
   sliders:any = {
    slides:[
@@ -35,6 +28,19 @@ export class HomepageComponent implements OnInit {
 
   WindowSize:number = window.innerWidth;
 
+  ngOnInit(): void {
+    this.api.BoxofficeMovies(2020).subscribe(data =>{
+      this.BoxofficeMoviesData = data;
+    });
+
+    this.api.LatestMoviesData().subscribe(data =>{
+      this.LatestMovies = data;
+    });
+
+    this.api.GenraList().subscribe(data =>{
+      this.GenraList = data;
+    })
+  }
 
 
 }

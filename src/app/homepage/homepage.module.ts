@@ -1,3 +1,4 @@
+import { SliderModule } from './../shared/comp/slider/slider.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,6 +8,7 @@ import { SearchComponent } from '../shared/comp/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { WideCardModule } from '../shared/comp/wide-card/wide-card.module';
 import { SmallCardModule } from '../shared/comp/small-card/small-card.module';
+import { RandommovieModule } from '../shared/comp/randommovie/randommovie.module';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
     FormsModule,
     SmallCardModule,
     HeaderModule,
+    RandommovieModule,
+    SliderModule,
     WideCardModule,
     RouterModule.forChild(routes)
   ]

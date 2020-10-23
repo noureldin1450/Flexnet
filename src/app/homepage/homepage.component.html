@@ -4,11 +4,22 @@
 
 <app-search></app-search>
 
+<app-slider></app-slider>
 
 <ng-container *ngIf="WindowSize > 500">
-    <app-wide-card  *ngFor="let slider of GenraList.tags.slice(0,5)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+    <app-wide-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-wide-card>
 </ng-container>
 
 <ng-container *ngIf="WindowSize <= 500">
-    <app-small-card *ngFor="let slider of GenraList.tags.slice(0,5)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+    <app-small-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-small-card>
 </ng-container>
+
+<app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomNumber - 1),RandomNumber)"></app-randommovie>
+
+<ng-container *ngIf="WindowSize > 500">
+    <app-wide-card  *ngFor="let slider of GenraList.tags.slice(1,3)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+</ng-container>
+<ng-container *ngIf="WindowSize <= 500">
+    <app-small-card *ngFor="let slider of GenraList.tags.slice(1,3)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+</ng-container>
+

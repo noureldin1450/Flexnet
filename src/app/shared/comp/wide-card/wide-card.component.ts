@@ -15,6 +15,7 @@ export class WideCardComponent implements OnInit,OnChanges {
   errorimage: string = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdata.whicdn.com%2Fimages%2F246393711%2Foriginal.gif&f=1&nofb=1';
 
   @Input() title?: string = '' || 'Flexnet Top Movies';
+  @Input() amount?:number;
 
   @Input() MoviesData?: any;
   @Input() MoviesGenra?: string;

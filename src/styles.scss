@@ -17,6 +17,9 @@
         width: 100%;
     }
 }
+footer{
+    margin: 2rem;
+}
 
 // .swiper-container-free-mode > .swiper-wrapper {
 //     padding-top: 20px !important;
@@ -28,6 +31,7 @@
 }
 
 .slider-title {
+    padding: 1rem 0px 0.7rem 0px !important;
     font-size: 1.7rem;
     font-weight: 500;
     padding-bottom: .7rem 0px !important;
@@ -46,6 +50,12 @@
     }
 }
 
+section{
+    .slider-title{
+        padding: 2rem 0px .7rem 0rem !important;
+    }
+}
+
 .ng-lazyloading {
     opacity: 0.4;
     transform: translateY(-16px);
@@ -56,8 +66,4 @@
     transform: translateY(0);
     transition: opacity .8s, transform .5s !important;
     transition-delay: .3s !important;
-}
-
-.slider-title {
-    padding: 1rem 0px 0.7rem 0px !important;
 }
