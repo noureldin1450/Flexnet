@@ -16,6 +16,14 @@
             background-color: $light-black-color;
             border-radius: $small-radius;
             font-weight: 600;
+            &:last-of-type{
+                margin: 0;
+            }
+
+            @include small-tap{
+                width: calc(100% / 3.5);
+                margin-right: .3rem !important;
+            }
 
             a {
                 align-items: center;
