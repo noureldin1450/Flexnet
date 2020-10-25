@@ -1,4 +1,4 @@
-<header *ngIf="MoviesData">
+<header class="animated fadeIn" *ngIf="MoviesData">
     <h1 class="slider-title">{{ title }}</h1>
     <swiper [config]="config">
         <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" title="Flexnet Watch {{movie.title}}" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover"></a>

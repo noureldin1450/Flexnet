@@ -8,90 +8,94 @@
 <!--
     LATEST MOVIES
 -->
-<ng-container *ngIf="WindowSize > 500">
-    <app-wide-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-wide-card>
-</ng-container>
-<ng-container *ngIf="WindowSize <= 500">
-    <app-small-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-small-card>
-</ng-container>
-
-<!--
-    A RANDOME MOVIE
--->
-<app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[0] - 1),RandomeNumbers[0])"></app-randommovie>
-
-
-<!--
-    A SLIDERS OF GENRAS
--->
-<ng-container *ngIf="WindowSize > 500">
-    <app-wide-card  *ngFor="let slider of GenraList.tags.slice(0,3)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
-</ng-container>
-<ng-container *ngIf="WindowSize <= 500">
-    <app-small-card *ngFor="let slider of GenraList.tags.slice(0,3)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
-</ng-container>
-
-<!--
-    A RANDOME MOVIE
--->
-<app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[1] - 1),RandomeNumbers[1])"></app-randommovie>
-
-
-<!--
-    A SLIDERS OF GENRAS
--->
-<ng-container *ngIf="WindowSize > 500">
-    <app-wide-card  *ngFor="let slider of GenraList.tags.slice(3,6)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
-</ng-container>
-<ng-container *ngIf="WindowSize <= 500">
-    <app-small-card *ngFor="let slider of GenraList.tags.slice(3,6)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
-</ng-container>
-
-<!--
-    A RANDOME MOVIE
--->
-<app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[2] - 1),RandomeNumbers[2])"></app-randommovie>
-
-
-<!--
-    THE END OF THE FIRST PAGE
--->
+<div class="animated fadeIn delay-2">
+    <ng-container *ngIf="WindowSize > 500">
+        <app-wide-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-wide-card>
+    </ng-container>
+    <ng-container *ngIf="WindowSize <= 500">
+        <app-small-card [amount]="10" [MoviesData]="LatestMovies.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-small-card>
+    </ng-container>
+    
+    <!--
+        A RANDOME MOVIE
+    -->
+    <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[0] - 1),RandomeNumbers[0])"></app-randommovie>
+    
+    
+    <!--
+        A SLIDERS OF GENRAS
+    -->
+    <ng-container *ngIf="WindowSize > 500">
+        <app-wide-card  *ngFor="let slider of GenraList.tags.slice(0,3)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+    </ng-container>
+    <ng-container *ngIf="WindowSize <= 500">
+        <app-small-card *ngFor="let slider of GenraList.tags.slice(0,3)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+    </ng-container>
+    
+    <!--
+        A RANDOME MOVIE
+    -->
+    <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[1] - 1),RandomeNumbers[1])"></app-randommovie>
+    
+    
+    <!--
+        A SLIDERS OF GENRAS
+    -->
+    <ng-container *ngIf="WindowSize > 500">
+        <app-wide-card  *ngFor="let slider of GenraList.tags.slice(3,6)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+    </ng-container>
+    <ng-container *ngIf="WindowSize <= 500">
+        <app-small-card *ngFor="let slider of GenraList.tags.slice(3,6)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+    </ng-container>
+    
+    <!--
+        A RANDOME MOVIE
+    -->
+    <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[2] - 1),RandomeNumbers[2])"></app-randommovie>
+    
+    
+    <!--
+        THE END OF THE FIRST PAGE
+    -->
+</div>
 
 <div *ngIf="loadmore == false" class="loadmore animated supportAnim">
     <button (click)="loadmore = true" class="btn">See More</button>
 </div>
 
 <ng-container *ngIf="loadmore == true">
-    <!--
-        A SLIDERS OF GENRAS
-    -->
-    <ng-container *ngIf="WindowSize > 500">
-        <app-wide-card  *ngFor="let slider of GenraList.tags.slice(7,10)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
-    </ng-container>
-    <ng-container *ngIf="WindowSize <= 500">
-        <app-small-card *ngFor="let slider of GenraList.tags.slice(7,10)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
-    </ng-container>
-
-    <!--
-        A RANDOME MOVIE
-    -->
-    <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[3] - 1),RandomeNumbers[3])"></app-randommovie>
-
-
-    <!--
-        A SLIDERS OF GENRAS
-    -->
-    <ng-container *ngIf="WindowSize > 500">
-        <app-wide-card  *ngFor="let slider of GenraList.tags.slice(11,14)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
-    </ng-container>
-    <ng-container *ngIf="WindowSize <= 500">
-        <app-small-card *ngFor="let slider of GenraList.tags.slice(11,14)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
-    </ng-container>
-
-    <!--
-        A RANDOME MOVIE
-    -->
-    <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[4] - 1),RandomeNumbers[4])"></app-randommovie>
+    <div class="animated fadeIn delay-1">
+        <!--
+            A SLIDERS OF GENRAS
+        -->
+        <ng-container *ngIf="WindowSize > 500">
+            <app-wide-card  *ngFor="let slider of GenraList.tags.slice(7,10)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+        </ng-container>
+        <ng-container *ngIf="WindowSize <= 500">
+            <app-small-card *ngFor="let slider of GenraList.tags.slice(7,10)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+        </ng-container>
+    
+        <!--
+            A RANDOME MOVIE
+        -->
+        <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[3] - 1),RandomeNumbers[3])"></app-randommovie>
+    
+    
+        <!--
+            A SLIDERS OF GENRAS
+        -->
+        <ng-container *ngIf="WindowSize > 500">
+            <app-wide-card  *ngFor="let slider of GenraList.tags.slice(11,14)" [title]="'Flexnet '+slider.name+' Movies'" title="a slider" [MoviesGenra]="slider.name"></app-wide-card>
+        </ng-container>
+        <ng-container *ngIf="WindowSize <= 500">
+            <app-small-card *ngFor="let slider of GenraList.tags.slice(11,14)" [title]="'Flexnet '+slider.name+' Movies'" [MoviesGenra]="slider.name"></app-small-card>
+        </ng-container>
+    
+        <!--
+            A RANDOME MOVIE
+        -->
+        <app-randommovie [movie]="LatestMovies.latestmovies.slice((RandomeNumbers[4] - 1),RandomeNumbers[4])"></app-randommovie>
+    </div>
 
     </ng-container>
 

@@ -7,22 +7,38 @@
     margin-bottom: 1rem !important;
 
     ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mid-mobile{
+            display: block;
+        }
+
         li {
             display: inline-flex;
             align-items: center;
-            // float: left;
             margin-right: 2rem;
             padding: 0.5rem 2.5rem;
             background-color: $light-black-color;
             border-radius: $small-radius;
             font-weight: 600;
-            &:last-of-type{
+            &:last-of-type {
                 margin: 0;
             }
 
-            @include small-tap{
+            @include small-tap {
                 width: calc(100% / 3.5);
-                margin-right: .3rem !important;
+                justify-content: center;
+                margin-right: 0.3rem !important;
+            }
+            @include mid-mobile{
+                width: 100%;
+                margin: .5rem 0px !important;
+                display: flex !important;
+                padding: 1rem 0px;
+                font-size: 1.1rem;
+                font-weight: 500;
             }
 
             a {
@@ -33,8 +49,13 @@
                     width: 20px;
                     height: 20px;
                     margin-right: 0.3rem;
+                    @include mid-mobile{
+                        width: 25px;
+                        height: 25px;
+                        margin-right: .5rem;
+                    }
                 }
             }
         }
-    }//the end of the ul
+    } //the end of the ul
 }

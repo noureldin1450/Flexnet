@@ -10,8 +10,11 @@
             <div class="card__info">
                 <h4>{{ movie.title | truncate:[20] }}</h4>
                 <ul>
-                    <li>
+                    <li *ngIf="movie.year">
                         {{ movie.year }} - {{ movie.rating }}/10
+                    </li>
+                    <li *ngIf="!movie.year">
+                        {{ movie.rating }}/10
                     </li>
                 </ul>
             </div>

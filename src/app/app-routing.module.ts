@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/router';
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'top',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 50],
+  paramsInheritanceStrategy: 'always',
+  preloadingStrategy: PreloadAllModules
+}
 
 const routes: Routes = [
   {
@@ -20,10 +28,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
-    paramsInheritanceStrategy: 'always',
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [RouterModule.forRoot(routes,routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

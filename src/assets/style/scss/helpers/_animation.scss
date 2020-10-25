@@ -53,6 +53,24 @@
     animation-delay: 5s !important;
 }
 
+.fast{
+  animation-delay: .5s;
+}
+.slow{
+  animation-delay: .7s;
+}
+.slower{
+  animation-delay: .9s;
+}
+.delay-1{
+  animation-delay: 1s;
+}
+.delay-1-5{
+  animation-delay: 1.5s;
+}
+.delay-2{
+  animation-delay: 2s;
+}
 .animated {
   animation-duration: .7s;
   animation-fill-mode: both;

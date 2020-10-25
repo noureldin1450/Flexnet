@@ -1,5 +1,5 @@
 <header class="movie">
-    <div class="big-info" style="background-image: url('{{ MovieData.moviebg }}');">
+    <div class="big-info animated fadeIn slow" style="background-image: url('{{ MovieData.moviebg }}');">
     
         <div class="overlay">
     
@@ -9,7 +9,7 @@
                 <div class="trailer" [innerHTML]="MovieData.trailer | trailer"></div>
     
                 <div class="btn">
-                    <a href="#movie-player" title="Flexnet Watch {{MovieData.title}}">
+                    <a [routerLink]="'.'" [fragment]="'movie-player'" title="Flexnet Watch {{MovieData.title}}">
                         <svg class="ion-icon">
                             <use href="/assets/icons.svg#icon-play"></use>
                         </svg>
@@ -24,7 +24,7 @@
 
     </div>
 
-    <div class="small-info" style="background-image: url('{{ MovieData.moviecover }}');">
+    <div class="small-info animated fadeIn slower" style="background-image: url('{{ MovieData.moviecover }}');">
         <div class="overlay">
             <div class="container">
                 <ul>

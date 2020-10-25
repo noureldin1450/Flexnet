@@ -2,7 +2,7 @@
 <!-- this is movie player -->
 <section class="movie-player" [attr.id]="'movieplayer'" *ngIf="MovieData">
     <div class="container">
-        <div class="servers">
+        <div class="servers animated fadeIn delay-1">
             <ul *ngIf="MovieData.server2; else nootherservers">
                 
                 <ng-template [ngIf]="MovieData.fushaarid">
@@ -32,7 +32,7 @@
             </ng-template>
         </div>
 
-        <div id="movie-player">
+        <div id="movie-player" class="animated fadeIn delay-1-5">
             <ng-template [ngIf]="( MovieData.fushaarid && server === 1)">
                 <div *ngIf="player" class="plyr animated fadeIn" plyr
                     [plyrTitle]="MovieData.title" 
@@ -62,5 +62,6 @@
             <p>all the thanks goes to fushaar without them we wouldn't be here today <img src="/assets/images/fushaarlogo.png" width="25px"></p>
         </div>
 
+        <p class="warning">!!! Before reporting this content make sure that your internet is good and fast, and try the other servers.</p>
     </div>
 </section>

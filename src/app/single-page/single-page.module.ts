@@ -1,3 +1,4 @@
+import { SmallCardModule } from './../shared/comp/small-card/small-card.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,9 +21,11 @@ const routes:Routes = [
   declarations: [SinglePageComponent, MovieHeaderComponent, MoviePlayerComponent, DownloadComponent],
   imports: [
     CommonModule,
+    SmallCardModule,
+    RouterModule,
     PlyrModule,
     PipesModule,
-    RouterModule.forChild(routes)  
+    RouterModule.forChild(routes)
   ],
   exports:[RouterModule]
 })

@@ -5,13 +5,26 @@
     text-align: center;
     clear: both;
     padding: 2rem 0px;
-    
+
     @include small-mobile {
         padding: 0rem;
     }
 
     .container {
-        width: 100%; 
+        width: 100%;
+
+        .warning {
+            color: $mid-pink-color;
+            font-size: 0.9rem;
+            padding-top: 1rem;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
 
         .attrib {
             text-align: center;
@@ -48,11 +61,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include mobile {
+                    display: block;
+                }
 
                 .active {
                     background: $light-black-color !important;
                     color: $white-color !important;
-                    transition: .5s;
+                    transition: 0.5s;
                 }
 
                 li {
@@ -66,37 +82,39 @@
                     font-weight: 800;
                     border: 2px solid $light-black-color;
                     float: left;
-                    transition: .5s;
-                    
+                    transition: 0.5s;
+
+                    @include large-tap {
+                        font-size: 0.9rem;
+                    }
                     @include mobile {
                         display: block;
                         margin: 0.5rem 0px;
+                        margin: 0.5rem 0px !important;
+                        width: 100%;
+                        padding: 0.3rem 0px;
                     }
-                    @include large-tap{
-                        font-size: .9rem;
-                    }
-                    @include tap {
-                        padding: 0.1rem 0.4rem;
-                    }
+
                     &:last-of-type {
                         margin: 1rem 0rem 0px 0px;
                     }
 
-                    .ion-icon{
+                    .ion-icon {
                         width: 20px;
                         height: 17px;
-                        margin-right: .5rem;
+                        margin-right: 0.5rem;
                     }
-                }//the servers buttons
-                .server1-active{
+                } //the servers buttons
+                .server1-active {
                     background: $gold-color !important;
                     color: $black-color !important;
                     border: none;
-                    transition: .5s;
-                    
-                    .ion-icon{
+                    transition: 0.2s;
+                    transition-delay: 0.1s;
+
+                    .ion-icon {
                         fill: $black-color;
-                        margin-right: .5rem;
+                        margin-right: 0.5rem;
                     }
                 }
             }
