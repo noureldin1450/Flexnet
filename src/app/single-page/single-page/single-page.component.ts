@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from './../../shared/services/api.service';
 
 @Component({
   selector: 'app-single-page',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SinglePageComponent implements OnInit {
 
-  constructor() { }
+  
+  MovieData:any;
+  Slug:string = this.route.snapshot.params.slug; 
+  
+  constructor(private api:ApiService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    //the main movie slug
+    this.api.MovieData(this.Slug).subscribe(data =>{
+      this.MovieData = data;
+      console.log(data)
+    })
   }
 
 }

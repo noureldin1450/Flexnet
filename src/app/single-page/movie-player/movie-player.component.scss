@@ -1,0 +1,136 @@
+@import "../../../assets/style/scss/global";
+
+/* main movie code */
+.movie-player {
+    text-align: center;
+    clear: both;
+    padding: 2rem;
+
+    @include small-mobile {
+        padding: 0rem;
+    }
+
+    .container {
+        width: 95%;
+
+        .attrib {
+            text-align: center;
+            background-color: $light-black-color;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            margin-bottom: 1rem;
+
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $white-color;
+                text-transform: capitalize;
+                margin: 0px !important;
+                padding: 0.7rem 1rem;
+            }
+            img {
+                width: 30px;
+                padding-left: 1rem;
+                @include tap {
+                    display: none;
+                }
+            }
+        } //end of attrib
+
+        .servers {
+            width: 100% !important;
+
+            ul {
+                margin-bottom: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .active {
+                    background: $light-black-color !important;
+                    color: $white-color !important;
+                    transition: .5s;
+                }
+
+                li {
+                    cursor: pointer;
+                    display: inline-flex;
+                    align-items: center;
+                    color: $white-color;
+                    padding: 0.2rem 1rem;
+                    margin: 1rem 0.4rem 0px 0px;
+                    border-radius: $small-radius;
+                    font-weight: 800;
+                    border: 2px solid $light-black-color;
+                    float: left;
+                    transition: .5s;
+                    
+                    @include mobile {
+                        display: block;
+                        margin: 0.5rem 0px;
+                    }
+                    @include tap {
+                        padding: 0.1rem 0.4rem;
+                    }
+                    &:last-of-type {
+                        margin: 1rem 0rem 0px 0px;
+                    }
+
+                    .ion-icon{
+                        width: 20px;
+                        height: 17px;
+                    }
+                }//the servers buttons
+                .server1-active{
+                    background: $gold-color !important;
+                    color: $black-color !important;
+                    border: none;
+                    transition: .5s;
+                    
+                    .ion-icon{
+                        fill: $black-color;
+                        margin-right: .3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    iframe {
+        width: 100%;
+        box-shadow: 0px 0px 15px rgba(43, 43, 43, 0.22);
+        border-radius: 5px;
+        height: 80vh;
+
+        @include laptop {
+            width: 100%;
+        }
+    }
+
+    .plyr {
+        width: 100% !important;
+        height: 90vh;
+    }
+    .plyr__control--overlaid {
+        background: $dark-pink-color !important;
+        transform: scale(1.5) !important;
+
+        @include mobile {
+            transform: scale(1.2) !important;
+        }
+    }
+    .plyr--full-ui input[type="range"] {
+        color: $dark-pink-color !important;
+    }
+    .plyr--video .plyr__control.plyr__tab-focus,
+    .plyr--video .plyr__control:hover,
+    .plyr--video .plyr__control[aria-expanded="true"] {
+        background: $dark-pink-color !important;
+    }
+    .plyr__menu__container .plyr__control[role="menuitemradio"][aria-checked="true"]::before {
+        background: $dark-pink-color !important;
+    }
+}

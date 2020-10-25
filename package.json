@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o --port=1313 --host 192.168.1.8 --disable-host-check",
+    "start": "ng serve -o --port=1313 --host 192.168.1.7 --disable-host-check",
     "serve": "ng serve --port=1313",
     "build": "ng build",
     "test": "ng test",
@@ -22,8 +22,10 @@
     "@angular/platform-browser-dynamic": "~10.0.5",
     "@angular/router": "~10.0.5",
     "ng-lazyload-image": "^9.0.1",
+    "ngx-plyr": "^4.0.0",
     "ngx-scrollbar": "^7.3.0",
     "ngx-swiper-wrapper": "^9.0.1",
+    "plyr": "^3.6.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

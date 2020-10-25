@@ -1,24 +1,119 @@
-@import './assets/style/scss/global';
+@import "./assets/style/scss/global";
 
-.container{
+.container {
     width: 95%;
     margin: 0px auto !important;
 }
-.ion-icon{
+.ion-icon {
     fill: $white-color;
     width: 30px;
     height: 30px;
 }
-.main{
-    width: calc(100% - 120px ); //the 100px is the nav max-width number
+.clear{
+    clear: both;
+}
+.main {
+    width: calc(100% - 120px); //the 100px is the nav max-width number
     float: right;
 
-    @include tap{
+    @include tap {
         width: 100%;
     }
 }
-footer{
-    margin: 2rem;
+.loadmore {
+    text-align: center;
+    .btn {
+        background: none;
+        border: none;
+        outline: none;
+        color: #ffff;
+        background: $light-black-color;
+        padding: 0.4rem 1.4rem;
+        font-size: 1.1rem;
+        margin: 1rem 0px 0px 0px;
+        text-align: center;
+        border-radius: $small-radius;
+        font-family: $mainfont;
+        cursor: pointer;
+    }
+}
+footer {
+    margin-bottom: 2rem;
+
+    @include tap {
+        margin-bottom: 4rem;
+    }
+}
+//the style for the btn in the randome movie component and the movie header component
+.btn {
+    @include tap {
+        padding-bottom: 1rem;
+    }
+    a {
+        display: inline-flex;
+        background: $light-black-color;
+        padding: 0.2rem 2.2rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: $small-radius;
+        margin-right: 1rem;
+        @include large-tap {
+            display: block;
+            width: 50%;
+            padding: 0.3rem 0px;
+            min-width: 240px;
+            text-align: center;
+            float: left;
+            padding: 0.2rem 0px;
+        }
+        @include tap {
+            float: none;
+            margin: 0 auto !important;
+            width: 270px;
+        }
+
+        &:first-child {
+            padding: 0rem;
+            background: $mid-pink-color;
+            display: inline-flex;
+            align-items: center;
+            color: $black-color;
+            float: left;
+            @include large-tap {
+                margin-bottom: 0.5rem;
+            }
+            @include tap {
+                float: none;
+                margin: 0 auto !important;
+            }
+
+            .ion-icon {
+                padding: 0.3rem 0.5rem;
+                width: 25px;
+                height: 22px;
+                fill: $dark-pink-color;
+                border-top-left-radius: $small-radius;
+                border-bottom-left-radius: $small-radius;
+                background-color: $light-pink-color;
+                @include large-tap {
+                    padding: 0.4rem 0.5rem;
+                }
+            }
+            span {
+                padding: 0px 1.5rem;
+                display: inline-flex;
+                align-items: center;
+                @include large-tap {
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        &:last-of-type {
+            margin: 0px;
+        }
+    }
 }
 
 // .swiper-container-free-mode > .swiper-wrapper {
@@ -34,25 +129,25 @@ footer{
     padding: 1rem 0px 0.7rem 0px !important;
     font-size: 1.7rem;
     font-weight: 500;
-    padding-bottom: .7rem 0px !important;
+    padding-bottom: 0.7rem 0px !important;
 
-    @include tap{
+    @include tap {
         font-weight: 600;
-        margin-top: .3rem !important;
+        margin-top: 0.3rem !important;
     }
 
-    @include mobile{
+    @include mobile {
         font-size: 1.5rem;
     }
 
-    @include small-mobile{
+    @include small-mobile {
         font-size: 1.3rem;
     }
 }
 
-section{
-    .slider-title{
-        padding: 2rem 0px .7rem 0rem !important;
+section {
+    .slider-title {
+        padding: 2rem 0px 0.7rem 0rem !important;
     }
 }
 
@@ -64,6 +159,6 @@ section{
 .ng-lazyloaded {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity .8s, transform .5s !important;
-    transition-delay: .3s !important;
+    transition: opacity 0.8s, transform 0.5s !important;
+    transition-delay: 0.3s !important;
 }

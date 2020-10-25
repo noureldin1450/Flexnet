@@ -1,4 +1,3 @@
-import { SliderModule } from './../shared/comp/slider/slider.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -25,9 +24,9 @@ const routes: Routes = [
     SmallCardModule,
     HeaderModule,
     RandommovieModule,
-    SliderModule,
     WideCardModule,
     RouterModule.forChild(routes)
-  ]
+  ],
+  exports:[RouterModule]
 })
 export class HomepageModule { }

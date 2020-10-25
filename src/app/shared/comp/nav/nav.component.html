@@ -1,34 +1,41 @@
+<div class="container">
+    <nav class="nav animated fadeInRight">
+        <div class="nav__logo">
+            <a [routerLink]="'/'"></a>
+        </div>
 
-<nav class="nav animated fadeInRight">
-    <div class="nav__logo">
-        <a [routerLink]="'/'"></a>
-    </div>
+        <ul class="nav__links">
 
-    <ul class="nav__links">
+            <li id="search-icon"><a href="/#search">
+                    <svg class="ion-icon">
+                        <use href="./assets/icons.svg#icon-search"></use>
+                    </svg>
+                </a></li>
 
-        <li><a href="">
-            <svg class="ion-icon">
-                <use href="./assets/icons.svg#icon-search"></use>
-            </svg>
-        </a></li>
+            <li><a [routerLink]="'/'">
+                    <svg class="ion-icon" [class.active]="route.url === '/'">
+                        <use href="./assets/icons.svg#icon-home"></use>
+                    </svg>
+                </a></li>
 
-        <li><a href="">
-            <svg class="ion-icon active">
-                <use href="./assets/icons.svg#icon-home"></use>
-            </svg>
-        </a></li>
+            <!-- <li><a href="">
+                    <svg class="ion-icon">
+                        <use href="./assets/icons.svg#icon-genra"></use>
+                    </svg>
+                </a></li> -->
 
-        <li><a href="">
-            <svg class="ion-icon">
-                <use href="./assets/icons.svg#icon-genra"></use>
-            </svg>
-        </a></li>
+            <li><a href="">
+                    <svg class="ion-icon">
+                        <use href="./assets/icons.svg#icon-add"></use>
+                    </svg>
+                </a></li>
 
-        <li><a href="">
-            <svg class="ion-icon">
-                <use href="./assets/icons.svg#icon-add"></use>
-            </svg>
-        </a></li>
+            <li id="small"><a href="/search">
+                    <svg class="ion-icon">
+                        <use href="./assets/icons.svg#icon-search"></use>
+                    </svg>
+                </a></li>
 
-    </ul>
-</nav>
+        </ul>
+    </nav>
+</div>

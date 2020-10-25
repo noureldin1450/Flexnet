@@ -28,7 +28,7 @@
         </div>
 
         <div class="movie__poster" [lazyLoad]="moviedata.moviecover">
-            <a [routerLink]="moviedata.slug" class="overlay">
+            <a [routerLink]="moviedata.slug" class="overlay" title="Flexnet Watch {{moviedata.title}}">
                 <svg class="ion-icon"><use href="/assets/icons.svg#icon-play"></use></svg>
             </a>
         </div>
@@ -58,7 +58,7 @@
                 </ul>
                 <ul class="genras">
                     <li *ngFor="let genra of moviedata.tags">
-                        <a [routerLink]="'/genra/'+genra">{{ genra }}</a>
+                        <a [routerLink]="'/tags/'+genra">{{ genra }}</a>
                     </li>
                 </ul>
                 <p>
@@ -66,7 +66,7 @@
                 </p>
 
                 <div class="btn">
-                    <a [routerLink]="moviedata.slug">
+                    <a [routerLink]="moviedata.slug"  title="Flexnet Watch {{moviedata.title}}">
                         <svg class="ion-icon"><use href="/assets/icons.svg#icon-play"></use></svg>
                         <span>
                             Watch Now

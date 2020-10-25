@@ -22,6 +22,11 @@ export class ApiService {
     return this.http.get(`${this.HEADERS}${this.APIURL}/boxoffices/${year}/index.json`);
   }
 
+  //Movie Data 
+  MovieData(Slug:string) {
+    return this.http.get(`${this.HEADERS}${this.APIURL}movies/${Slug}/index.json`);
+  }
+
   //the genra list 
   GenraData(genra:string) {
     return this.http.get(`${this.HEADERS}${this.APIURL}tags/${genra}/index.json`);

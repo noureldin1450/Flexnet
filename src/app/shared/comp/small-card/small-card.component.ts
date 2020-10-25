@@ -20,12 +20,12 @@ export class SmallCardComponent implements OnInit {
   
   constructor(private api:ApiService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
   ngOnChanges(Changes: SimpleChanges){
     if(this.MoviesGenra != undefined && this.MoviesData == undefined){
       this.MoviesGenra = Changes.MoviesGenra.currentValue;
-
+      
       this.api.GenraData(this.MoviesGenra).subscribe(data =>{
         this.MoviesData = data;
       })

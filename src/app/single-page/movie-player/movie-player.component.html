@@ -1,0 +1,66 @@
+
+<!-- this is movie player -->
+<section class="movie-player" [attr.id]="'movieplayer'" *ngIf="MovieData">
+    <div class="container">
+        <div class="servers">
+            <ul *ngIf="MovieData.server2; else nootherservers">
+                
+                <ng-template [ngIf]="MovieData.fushaarid">
+                    <li [class.active]="server === 1" [class.server1-active]="server === 1" id="server1" (click)="server = 1">
+                        <svg class="ion-icon"><use href="/assets/icons.svg#icon-premium"></use></svg>
+                        Premium Server
+                    </li>
+                </ng-template>
+
+                <ng-template [ngIf]="!MovieData.fushaarid">
+                    <li [class.active]="server === 1" (click)="server = 1">Server 1</li>
+                </ng-template>
+                <ng-template [ngIf]="MovieData.server2">
+                    <li [class.active]="server === 2" (click)="server = 2">Server 2</li>
+                </ng-template>
+                <ng-template [ngIf]="MovieData.server3">
+                    <li [class.active]="server === 3" (click)="server = 3">Server 3</li>
+                </ng-template>
+                <ng-template [ngIf]="MovieData.server4">
+                    <li [class.active]="server === 4" (click)="server = 4">Server 4</li>
+                </ng-template>
+                <ng-template [ngIf]="MovieData.server5">
+                    <li [class.active]="server === 5" (click)="server = 5">Server 5</li>
+                </ng-template>
+            </ul>
+            <ng-template #nootherservers>
+            </ng-template>
+        </div>
+
+        <div id="movie-player">
+            <ng-template [ngIf]="( MovieData.fushaarid && server === 1)">
+                <div *ngIf="player" class="plyr animated fadeIn" plyr
+                    [plyrTitle]="MovieData.title" 
+                    [plyrPlaysInline]="'true'" 
+                    [plyrSources]="videoSources"
+                    [plyrPoster]="MovieData.moviebg">
+                </div>
+            </ng-template>
+
+            <ng-template [ngIf]="( !MovieData.fushaarid && server === 1)">
+                <ng-template [ngIf]="MovieData.server2">
+                    <span [innerHTML]="MovieData.server2 | moviePlayer"></span>
+                </ng-template>
+                <span *ngIf="!MovieData.server2" [innerHTML]="MovieData.imdbid | moviePlayer:'imdb'"></span>
+            </ng-template>
+
+            <span *ngIf="server === 2" [innerHTML]="MovieData.server2 | moviePlayer"></span>
+
+            <span *ngIf="server === 3" [innerHTML]="MovieData.server3 | moviePlayer"></span>
+
+            <span *ngIf="server === 4" [innerHTML]="MovieData.server4 | moviePlayer"></span>
+
+            <span *ngIf="server === 5" [innerHTML]="MovieData.server5 | moviePlayer"></span>
+        </div>
+
+        <div class="attrib" *ngIf="server === 1">
+            <p>all the thanks goes to fushaar without them we wouldn't be here today <img src="/assets/images/fushaarlogo.png" width="25px"></p>
+        </div>
+
+    </div>
+</section>

@@ -1,6 +1,5 @@
-import { HomepageModule } from './homepage/homepage.module';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -10,11 +9,21 @@ const routes: Routes = [
   {
     path: 'movies/:slug',
     loadChildren: () => import('./single-page/single-page.module').then(m => m.SinglePageModule)
+  },
+  {
+    path: 'tags/:tag',
+    loadChildren: () => import('./list-page/list-page.module').then(m => m.ListPageModule)
+  },
+  {
+    path:'**', redirectTo: '' 
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    paramsInheritanceStrategy: 'always',
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

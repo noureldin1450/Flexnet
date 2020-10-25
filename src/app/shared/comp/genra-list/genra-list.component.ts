@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenraListComponent implements OnInit{
 
-  constructor(private api:ApiService) {}
+  constructor(private api:ApiService, public router:Router) {}
 
   genralist:any;
 

@@ -1,0 +1,32 @@
+@import "../../../assets/style/scss/global";
+
+.download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem !important;
+
+    ul {
+        li {
+            display: inline-flex;
+            align-items: center;
+            // float: left;
+            margin-right: 2rem;
+            padding: 0.5rem 2.5rem;
+            background-color: $light-black-color;
+            border-radius: $small-radius;
+            font-weight: 600;
+
+            a {
+                align-items: center;
+                display: inline-flex;
+
+                .ion-icon {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 0.3rem;
+                }
+            }
+        }
+    }//the end of the ul
+}
