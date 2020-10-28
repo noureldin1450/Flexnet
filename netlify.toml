@@ -1,5 +1,5 @@
 [build]
-publish = "dist/flexnet"
+publish = "dist/Flexnet-angular"
 command = "npm run build"
 
 [[plugins]]
