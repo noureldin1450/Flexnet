@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o --port=1313 --host 192.168.1.4 --disable-host-check",
-    "serve": "ng serve --port=1313",
+    "start": "ng serve --configuration=test --port=1313 --host 192.168.1.4 --disable-host-check",
+    "serve": "ng serve --configuration=test --port=1313",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
