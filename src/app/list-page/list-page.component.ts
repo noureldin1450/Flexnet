@@ -1,3 +1,4 @@
+import { SeoService } from './../shared/services/seo.service';
 import { ApiService } from './../shared/services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -12,7 +13,7 @@ export class ListPageComponent implements OnInit{
   GenraMovies:any;
   genra:string; 
   
-  constructor(private route:ActivatedRoute, private api:ApiService) {}
+  constructor(private route:ActivatedRoute, private api:ApiService, private SEO:SeoService) {}
 
   ngOnInit(): void {
 
@@ -26,6 +27,9 @@ export class ListPageComponent implements OnInit{
         this.GenraMovies = data;
       });
       console.log('Done new data has been pushed.');
+
+      console.log('Updating the seo meta data...');
+      this.SEO.SEO(`${this.genra} Movies`,'','');
     })
 
   }

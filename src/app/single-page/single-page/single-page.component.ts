@@ -10,11 +10,10 @@ import { ApiService } from './../../shared/services/api.service';
 })
 export class SinglePageComponent implements OnInit {
 
-  
   MovieData:any;
   Slug:string; 
-  
-  constructor(private api:ApiService, private route:ActivatedRoute, private SEO:SeoService) { }
+
+  constructor(private api:ApiService, private route:ActivatedRoute, private SEO:SeoService){}
 
   ngOnInit(): void {
 
@@ -29,9 +28,10 @@ export class SinglePageComponent implements OnInit {
       console.log('Am Getting Movie Data...');
       this.api.MovieData(this.Slug).subscribe(data =>{
         this.MovieData = data;
-        
+
+        console.log('Updateing the Seo meta data...');
         //adding the seo after the data has been loaded.      
-        this.SEO.SEO(this.MovieData.title, (`${this.MovieData.title} ${this.MovieData.story}`), this.MovieData.moviecover);
+        this.SEO.SEO((`${this.MovieData.title} ${this.MovieData.year}`), (`${this.MovieData.title} ${this.MovieData.story}`), this.MovieData.moviecover);
         console.log(data)
       });
 

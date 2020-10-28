@@ -23,7 +23,7 @@ export class SeoService {
     if (title) {
       return (
         //adding the title for the page
-        this.SeoTitle.setTitle(title + " Watch Now For Free - Flexnet"),
+        this.SeoTitle.setTitle(title + " Watch Now For Free At Flexnet - Flexnet"),
         //adding the Og:title for the page
         this.SeoMeta.addTags([
           { name: 'og:title', content: title || this.DefaultTitle }

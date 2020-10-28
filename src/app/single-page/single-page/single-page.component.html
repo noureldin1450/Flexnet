@@ -1,9 +1,10 @@
 
 
-<app-movie-header [MovieData]="MovieData"></app-movie-header>
 
-<app-movie-player [MovieData]="MovieData"></app-movie-player>
+<app-movie-header *ngIf="MovieData" [MovieData]="MovieData"></app-movie-header>
 
-<app-download [MovieData]="MovieData"></app-download>
+<app-movie-player *ngIf="MovieData" [MovieData]="MovieData"></app-movie-player>
 
-<app-small-card [MoviesData]="MovieData?.related" [title]="'More to watch:'"></app-small-card>
+<app-download *ngIf="MovieData" [MovieData]="MovieData"></app-download>
+
+<app-small-card *ngIf="MovieData" [MoviesData]="MovieData?.related" [title]="'More to watch:'"></app-small-card>
