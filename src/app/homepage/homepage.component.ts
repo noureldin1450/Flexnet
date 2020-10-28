@@ -1,3 +1,4 @@
+import { SeoService } from './../shared/services/seo.service';
 import { ApiService } from './../shared/services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
@@ -9,7 +10,7 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(public api: ApiService) { }
+  constructor(public api: ApiService, private Seo:SeoService) { }
 
   loadmore: boolean = false;
 
@@ -37,17 +38,23 @@ export class HomepageComponent implements OnInit {
   WindowSize: number = window.innerWidth;
 
   ngOnInit(): void {
-    this.api.BoxofficeMovies(2020).subscribe(data => {
-      this.BoxofficeMoviesData = data;
-    });
+    
+    this.Seo.SEO();
 
-    this.api.LatestMoviesData().subscribe(data => {
-      this.LatestMovies = data;
-    });
-
+    console.log('Getting Genralist Data...');
     this.api.GenraList().subscribe(data => {
       this.GenraList = data;
     })
+
+    console.log('Getting Boxoffice Movies Data...');
+    this.api.BoxofficeMovies(2020).subscribe(data => {
+      this.BoxofficeMoviesData = data;
+    });
+    
+    console.log('Getting Latest Movies Data...');
+    this.api.LatestMoviesData().subscribe(data => {
+      this.LatestMovies = data;
+    });
 
     this.GenrateRandomNumbers()
     this.GenrateRandomNumbers()

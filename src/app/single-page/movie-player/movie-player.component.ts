@@ -14,21 +14,23 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
   @Input() MovieData:any;
 
   server: number = 1;
-
   player: boolean = false;
-
   videoSources: Plyr.Source[] = [];
 
   ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
+    // console.log(changes);
     const MovieData = changes['MovieData']
 
     //when we had the data from the api
     if (MovieData.currentValue) {
-      console.log('data has loaded');
-
+      console.log('Movie resources are here...');
+      //restarting the player
+      console.log('Player Is Off');
+      this.player = false;
+      
+      console.log('Genrating the data...');
       let fushaarid = this.MovieData.fushaarid;
       let fushaarapi = 'https://bg.stream.fushaar.com/movie/';
       let googleapi = 'https://storage.googleapis.com/neon-reporter-274200.appspot.com/fushaar/media/';
@@ -42,8 +44,11 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
   }
 
   pushdata(q240?: string, q480?: string, q1080?: string) {
-    console.log(q240, q480, q1080);
 
+    console.log('Removing The Old Src');
+    this.videoSources = [];
+    
+    console.log('Pushing The New Data...', q240,q480,q1080);
     if (typeof q240 !== 'undefined') {
       this.videoSources.push(
         {
@@ -68,10 +73,9 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
           size: 1080
         });
     }
-    console.log('push data is Done')
+    console.log('Data Is Pushed')
     this.player = true;
-    console.log('player is shown')
-
+    console.log('Player Is Back On');
   }
 
 }

@@ -1,15 +1,15 @@
 <header class="movie">
-    <div class="big-info animated fadeIn slow" style="background-image: url('{{ MovieData.moviebg }}');">
+    <div class="big-info animated fadeIn slow" style="background-image: url('{{ MovieData?.moviebg }}');">
     
         <div class="overlay">
     
             <div class="container">
-                <h2>{{ MovieData.title }}</h2>
-                <p>{{ MovieData.story | truncate:[200] }}</p>
-                <div class="trailer" [innerHTML]="MovieData.trailer | trailer"></div>
+                <h2>{{ MovieData?.title }}</h2>
+                <p>{{ MovieData?.story | truncate:[200] }}</p>
+                <div class="trailer" [innerHTML]="MovieData?.trailer | trailer"></div>
     
                 <div class="btn">
-                    <a [routerLink]="'.'" [fragment]="'movie-player'" title="Flexnet Watch {{MovieData.title}}">
+                    <a [routerLink]="'.'" [fragment]="'movie-player'" title="Flexnet Watch {{MovieData?.title}}">
                         <svg class="ion-icon">
                             <use href="/assets/icons.svg#icon-play"></use>
                         </svg>
@@ -24,15 +24,15 @@
 
     </div>
 
-    <div class="small-info animated fadeIn slower" style="background-image: url('{{ MovieData.moviecover }}');">
+    <div class="small-info animated fadeIn slower" style="background-image: url('{{ MovieData?.moviecover }}');">
         <div class="overlay">
             <div class="container">
                 <ul>
-                    <li><span>Year:</span> {{ MovieData.year }}</li>
-                    <li><span>Rating:</span> {{ MovieData.rating}}</li>
-                    <li><span>Duration:</span> {{ MovieData.duration }}</li>
-                    <li><span>PG:</span> {{ MovieData.pg }}</li>
-                    <li><span>Genra:</span> <ul><li *ngFor="let genra of MovieData.tags"><a [routerLink]="'/tags/'+genra">{{ genra }}</a><span>,</span></li></ul></li>
+                    <li><span>Year:</span> {{ MovieData?.year }}</li>
+                    <li><span>Rating:</span> {{ MovieData?.rating}}</li>
+                    <li><span>Duration:</span> {{ MovieData?.duration }}</li>
+                    <li><span>PG:</span> {{ MovieData?.pg }}</li>
+                    <li><span>Genra:</span> <ul><li *ngFor="let genra of MovieData?.tags"><a [routerLink]="'/tags/'+genra">{{ genra }}</a><span>,</span></li></ul></li>
                 </ul>
             </div>
         </div>

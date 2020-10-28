@@ -15,7 +15,9 @@ export class GenraListComponent implements OnInit{
 
   ngOnInit(): void {
     this.api.GenraList().subscribe(data =>{
+      console.log('loading the genras...');
       this.genralist = data;
+      console.log(data,'Done genras has been loaded.')
     });
   }
 

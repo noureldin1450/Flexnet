@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/router';
+import { RequstComponent } from './shared/comp/requst/requst.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'top',
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
   path:'', 
   loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule)
+  },
+  {
+    path: 'request',
+    component: RequstComponent
   },
   {
     path: 'movies/:slug',

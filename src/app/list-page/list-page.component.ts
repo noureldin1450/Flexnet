@@ -10,14 +10,23 @@ import { ActivatedRoute } from '@angular/router';
 export class ListPageComponent implements OnInit{
 
   GenraMovies:any;
-  genra:string = this.route.snapshot.params.tag;
+  genra:string; 
   
-  constructor(private route:ActivatedRoute, private api:ApiService) {    
-    this.api.GenraData(this.genra).subscribe(data =>{
-      this.GenraMovies = data;
-    })
-  }
+  constructor(private route:ActivatedRoute, private api:ApiService) {}
 
   ngOnInit(): void {
+
+    this.route.paramMap.subscribe(params =>{
+
+      console.log('Getting the tag name...')
+      this.genra = this.route.snapshot.params.tag;
+
+      console.log('Req the new data...');
+      this.api.GenraData(this.genra).subscribe(data =>{
+        this.GenraMovies = data;
+      });
+      console.log('Done new data has been pushed.');
+    })
+
   }
 }

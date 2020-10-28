@@ -1,27 +1,12 @@
 <ng-scrollbar class="my-scrollbar animated fadeIn slow">
-
-    <ul class="keywords container" *ngIf="router.url == '/' || router.url == '' || router.url == '/movies'; else StaticRoute">
+    <ul class="keywords container">
         <!-- Main tags -->
-        <li *ngFor="let genra of genralist.tags"><a [routerLink]="genra.link"
+        <li *ngFor="let genra of genralist?.tags"><a [routerLink]="genra.link"
                 title="Flexnet {{ genra.name }} Movies">{{ genra.name }} Movies</a>
         </li>
         <!-- SEO tags -->
-        <li *ngFor="let genra of genralist.seo"><a [routerLink]="genra.link"
+        <li *ngFor="let genra of genralist?.seo"><a [routerLink]="genra.link"
                 title="Flexnet {{ genra.name }} Movies">{{ genra.name }} Movies</a>
         </li>
     </ul>
-
-    <ng-template #StaticRoute>
-        <ul class="keywords container">
-            <!-- Main tags -->
-            <li *ngFor="let genra of genralist.tags"><a href="{{genra.link}}"
-                    title="Flexnet {{ genra.name }} Movies">{{ genra.name }} Movies</a>
-            </li>
-            <!-- SEO tags -->
-            <li *ngFor="let genra of genralist.seo"><a href="{{genra.link}}"
-                    title="Flexnet {{ genra.name }} Movies">{{ genra.name }} Movies</a>
-            </li>
-        </ul>
-    </ng-template>
-
 </ng-scrollbar>

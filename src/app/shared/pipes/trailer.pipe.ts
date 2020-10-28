@@ -14,10 +14,7 @@ export class TrailerPipe implements PipeTransform {
 
   transform(URL: string):any {
     return this.Sanitizer.bypassSecurityTrustHtml(`
-     <iframe src="${URL}"" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope picture-in-picture"
-        allowfullscreen>
-      </iframe>
+     <iframe src="${URL}"" frameborder="0" allowfullscreen></iframe>
     `)
   }
 

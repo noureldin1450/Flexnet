@@ -17,7 +17,7 @@ export class RandommovieComponent implements OnInit,OnChanges {
   ngOnInit(): void {}
   
   ngOnChanges(Changes:SimpleChanges){
-    if(Changes.movie.currentValue[0]){
+    if(Changes.movie?.currentValue[0]){
       this.show = true;
       console.log(this.show)
     }

@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './shared/comp/nav/nav.component';
 import { GenraListModule } from './shared/comp/genra-list/genra-list.module';
 import { SupportComponent } from './shared/comp/support/support.component';
+import { RequstComponent } from './shared/comp/requst/requst.component';
+import { SeoService } from './shared/services/seo.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    SupportComponent
+    SupportComponent,
+    RequstComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,7 @@ import { SupportComponent } from './shared/comp/support/support.component';
     GenraListModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SeoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

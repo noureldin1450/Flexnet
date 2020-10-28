@@ -6,14 +6,14 @@
 
         <ul class="nav__links">
 
-            <li id="search-icon"><a href="/#search">
+            <li id="search-icon"><a [routerLink]="'.'" [fragment]="'search'">
                     <svg class="ion-icon">
                         <use href="./assets/icons.svg#icon-search"></use>
                     </svg>
                 </a></li>
 
             <li><a [routerLink]="'/'">
-                    <svg class="ion-icon" [class.active]="route.url === '/'">
+                    <svg class="ion-icon" [class.active]="route.url === '/' || route.url === '/#search'">
                         <use href="./assets/icons.svg#icon-home"></use>
                     </svg>
                 </a></li>
@@ -24,13 +24,13 @@
                     </svg>
                 </a></li> -->
 
-            <li><a href="">
+            <li><a [routerLink]="'request'">
                     <svg class="ion-icon">
                         <use href="./assets/icons.svg#icon-add"></use>
                     </svg>
                 </a></li>
 
-            <li id="small"><a href="/search">
+            <li id="small"><a [routerLink]="'.'" [fragment]="'search'">
                     <svg class="ion-icon">
                         <use href="./assets/icons.svg#icon-search"></use>
                     </svg>
