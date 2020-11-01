@@ -27,7 +27,7 @@ jobs:
       - name: Installing Depednesses & Building the code
         run: |
           npm i
-          npm run build:prod
+          npm run build
       
       - name: Push the build
         uses: ncipollo/release-action@v1
