@@ -34,3 +34,4 @@ jobs:
         with:
           artifacts: "dist/Flexnet-angular/*"
           token: ${{ secrets.TOKEN }}
+          
