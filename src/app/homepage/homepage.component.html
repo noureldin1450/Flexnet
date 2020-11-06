@@ -1,15 +1,20 @@
 
 
+<!-- 
+    Header Code
+ -->
 <app-header title="Flexnet Top Movies" [MoviesData]="BoxofficeMoviesData"></app-header>
 
-
+<!-- 
+    Search bar Code
+ -->
 <app-search></app-search>
-
 
 <!--
     LATEST MOVIES
 -->
 <div class="animated fadeIn delay-2">
+
     <ng-container *ngIf="WindowSize > 500">
         <app-wide-card [amount]="10" [MoviesData]="LatestMovies?.latestmovies" [title]="'Flexnet Latest Movies'" title="Flexnet Latest Movies"></app-wide-card>
     </ng-container>
@@ -98,9 +103,5 @@
         <app-randommovie [movie]="LatestMovies?.latestmovies.slice((RandomeNumbers[4] - 1),RandomeNumbers[4])"></app-randommovie>
     </div>
 
-    </ng-container>
-
-
-
-
+</ng-container>
 

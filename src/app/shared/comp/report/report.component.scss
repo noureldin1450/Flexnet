@@ -1,0 +1,29 @@
+@import "../../../../assets/style/scss/global";
+
+.report-btn {
+    z-index: 10;
+    cursor: pointer;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    height: 51px;
+    justify-content: center;
+    background: $dark-pink-color;
+    border-bottom-right-radius: $normal-radius;
+
+    .ion-icon {
+        width: 20px;
+        height: 20px;
+        float: left;
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 800;
+        width: auto;
+        padding-left: .5rem !important;
+    }
+}
+.report-qustions {
+    display: none;
+}

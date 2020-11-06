@@ -16,7 +16,7 @@ import { SeoService } from './shared/services/seo.service';
     AppComponent,
     NavComponent,
     SupportComponent,
-    RequstComponent
+    RequstComponent,
   ],
   imports: [
     BrowserModule,

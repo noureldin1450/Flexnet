@@ -1,3 +1,4 @@
+import { ReportComponent } from './../shared/comp/report/report.component';
 import { SmallCardModule } from './../shared/comp/small-card/small-card.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,7 @@ const routes:Routes = [
 
 
 @NgModule({
-  declarations: [SinglePageComponent, MovieHeaderComponent, MoviePlayerComponent, DownloadComponent],
+  declarations: [SinglePageComponent, MovieHeaderComponent, MoviePlayerComponent, DownloadComponent, ReportComponent],
   imports: [
     CommonModule,
     SmallCardModule,

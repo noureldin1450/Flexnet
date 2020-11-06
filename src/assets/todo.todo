@@ -1,45 +1,65 @@
 
 
 
-# additional important 
 
-[x] theme colors 
-[x] theme fonts
-[x] design icons 
+# Advanced Things 
+    [ ] Report Sys
+        [ ] stratgy
+            # how it will work?
+                1. when the user click report btn we will add #report
+                in the url
+                
+                2. when there is #report in the url a popup qustion will show and ask some qustions
 
-# things to do before deployment
-[ ] add google analytics
-[ ] add the code to the main repo 
+                3. when we click finsh the url will be a url for a campain called report
+                wich will make a thanks message showup that have a button to the homepage
 
-# Main Site build block
-[o] Nav
-    - logo
-    [] nav links
-        - hover state
+            # what qustions are we going to ask
+
+                ##issuses
+                1. voice not working
+                2. it's not working
+                3. i can't download it
+                4. Other
+
+                ##qustions that we have to know
+                1. what is you internet connection type
+                    -DSL -WIFI -3G,4G mobile data -other 
+                
+                2. what is you device type
+                    -Phone -Pc -Laptop -other
+                    1. what is your screen size?
+                        !that will be answerd automaticly  
+                
+                3. what is your email and name
+                    -name:
+                    -email: 
+
+                4. discribe your problem
+                    -Type here: 
+            
+            # Example for what i want at the end:
+               https://flexnet.ga/movies/jojo-rabbit-2019?utm_source=report&utm_medium=Report&utm_campaign=report&utm_content=issuses%20not%20working%20name%20nour%20internet%20type%20DSL%20device%20type%20phone%20screen%20size%20height%20700%20width%201500
 
 
-[ ] Tags section
-    [ ] make it responsive
-    [x] get the data
-    [x] add styles
-    [x] custome the scrollbar
-     [-] or make it a slider
+        [x] Design it 
+        [ ] Code it 
+            # what i need to do?
+                [ ] make a report comp that will show when there is a #report
+                    in the url
 
-[ ] Header big slider(box office)
-    [ ] add the slider library
-    [ ] lazy load the images
-    [ ] add the world box office in the backend
-        [ ] add some of the box office movie for the year
-
-[ ] Search
-
-[ ] Movies sliders
-
-[ ] Random movie section
-
-[ ] support section
-
-[ ] newsetter section
-
-[ ] make the other pages
+                [ ] add qustions to that report comp
+                    
+                    [ ] save the answers
+                    
+                    [ ] format the answers
+                        - replace any space with %20 
+                    
+                    [ ] creat a urm-campagin url with the answers
+                        - the site url
+                        - campgain info
+                        - add the formated asnwer at the utm_content
+                    
+                    [ ] make a thanks message at the end when we go to the utm camogain url.
+                        - add a homepage button  
 

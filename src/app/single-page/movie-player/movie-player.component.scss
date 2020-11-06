@@ -42,7 +42,13 @@
                 color: $white-color;
                 text-transform: capitalize;
                 margin: 0px !important;
-                padding: 0.7rem 1rem;
+                padding: 0.7rem 0px;
+                width: 80%;
+            }
+            .report {
+                float: right;
+                width: 20%;
+                max-width: 100px;
             }
             img {
                 width: 30px;
