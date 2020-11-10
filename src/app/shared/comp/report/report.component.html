@@ -1,11 +1,47 @@
-<div class="report-btn">
+<div class="report-btn" (click)="OpenReport()">
     <svg class="ion-icon">
         <use xlink:href="/assets/icons.svg#icon-flag"></use>
     </svg>
     <p>Report</p>
 </div>
 
+<div *ngIf="report" class="report-qustions">
+    <div class="container">
+        <div class="content">
+            <ul>
 
-<div class="report-qustions">
-    <h1> am not visble</h1>
+                <li *ngFor="let qustion of qustions">
+                    <div *ngIf="qustion.number === qustionNumber" class="animated fadeIn    ">
+                        <h3 class="qustion">{{ qustion?.q }}</h3>
+                        <div class="answers">
+                            <ul>
+                                <li *ngFor="let answer of qustion.answers"
+                                    [ngClass]="{'active': search(answer.value,
+                                    (qustion.type === 'GenrallIssuses'? GenrallIssuses : 
+                                    'ConnectionType' ? ConnectionType : 'DeviceType' ? DeviceType : false), 
+                                    qustion.type) === true}" 
+                                    (click)='AddIssuses(answer.value, qustion.type)'>{{ answer.string }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <li *ngIf="qustionNumber >= 3">
+                   <h2>Thank you for reporting this content.
+                    <br>    
+                        we will fix this problem soon.
+                    </h2> 
+                </li>
+                
+                <a class="btn exit" *ngIf="qustionNumber < 3" (click)="report = false">
+                    Exit
+                </a>
+                <a class="btn" *ngIf="qustionNumber < 3" (click)="nextqustion()">
+                    {{ (qustionNumber < 2 ? 'Next' : qustionNumber == 2 ? 'Finsh' : false) }}
+                </a>
+                <a class="btn" *ngIf="qustionNumber >= 3" [routerLink]="'/'">Home Page</a>
+            </ul>
+        </div>
+    </div>
 </div>

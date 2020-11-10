@@ -11,19 +11,149 @@
     background: $dark-pink-color;
     border-bottom-right-radius: $normal-radius;
 
+    @include small-laptop{
+        height: 100%;
+    }
+    @include mid-mobile{
+        border-radius: 0;
+    }
+
     .ion-icon {
         width: 20px;
         height: 20px;
         float: left;
+
+        @include large-tap{
+            width: 18px;
+            height: 18px;
+        }
+        @include mobile{
+            height: 40px;
+        }
     }
 
     p {
         font-size: 13px;
         font-weight: 800;
         width: auto;
-        padding-left: .5rem !important;
+        padding-left: 0.5rem !important;
+
+        @include large-tap{
+            font-size: 12px;
+        }
+        @include mobile{
+            display: none;
+        }
+        @include mid-mobile{
+            display: block;
+        }
     }
 }
 .report-qustions {
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 45;
+    background: rgba(18, 18, 18, 0.7);
+    transition: 0.5s;
+
+    .container {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100vh;
+    }
+
+    .content {
+        width: calc(100% - 120px); //the 100px is the nav max-width number
+        padding: 2rem 0px;
+        float: right;
+        border-radius: $normal-radius;
+        background: $light-black-color;
+
+        @include tap {
+            width: 100%;
+        }
+        
+        li {
+            h2 {
+                margin-bottom: 1rem !important; //thanks msg space for the btn
+                @include mid-mobile{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        ul {
+            .btn {
+                background-color: $dark-pink-color;
+                padding: 0.4rem 2rem;
+                font-size: 1.1rem;
+                font-weight: 500;
+                border-radius: $normal-radius;
+                cursor: pointer;
+
+                &:first-of-type{
+                    margin-right: 1rem;
+                }
+                &:last-of-type{
+                    margin: 0;
+                }
+                @include mobile{
+                    font-size: .9rem;
+                }
+            }
+            .exit{
+                opacity: .6;
+            }
+
+            li {
+                .qustion {
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    padding-bottom: 1rem;
+
+                    @include mobile{
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                }
+                .answers {
+                    ul {
+                        margin-bottom: 1rem; //for the btn to have some space
+
+                        li {
+                            border: 2px solid $lighter-black-color;
+                            padding: 0.4rem 0.8rem;
+                            display: inline-flex;
+                            margin: 0px 0.7rem 0.7rem 0px;
+                            border-radius: $normal-radius;
+                            cursor: pointer;
+                            text-transform: capitalize;
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            transition: 0.3s;
+
+                            &:last-of-type {
+                                margin: 0px;
+                            }
+
+                            @include mobile{
+                                font-size: 13px;
+                                font-weight: 700;
+                                padding: .4rem .6rem;
+                            }
+                        }
+                        .active {
+                            transition: 0.3s;
+                            background-color: $lighter-black-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

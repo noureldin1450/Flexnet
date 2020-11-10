@@ -44,15 +44,36 @@
                 margin: 0px !important;
                 padding: 0.7rem 0px;
                 width: 80%;
+
+                @include small-laptop{
+                    font-size: 12px;
+                }
+                @include mobile{
+                    width: 90%;
+                }
+                @include mid-mobile{
+                    width: 100%;
+                }
             }
             .report {
                 float: right;
                 width: 20%;
                 max-width: 100px;
+             
+                @include mobile{
+                    width: 8%;
+                }
+                @include mid-mobile{
+                    width: 100%;
+                    max-width: 100%;
+                }
             }
             img {
                 width: 30px;
                 padding-left: 1rem;
+                @include small-laptop{
+                    width: 20px;
+                }
                 @include tap {
                     display: none;
                 }

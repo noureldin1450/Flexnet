@@ -43,23 +43,20 @@
 
 
         [x] Design it 
-        [ ] Code it 
+        [o] Code it 
             # what i need to do?
                 [ ] make a report comp that will show when there is a #report
                     in the url
-
-                [ ] add qustions to that report comp
-                    
-                    [ ] save the answers
-                    
-                    [ ] format the answers
-                        - replace any space with %20 
-                    
-                    [ ] creat a urm-campagin url with the answers
-                        - the site url
-                        - campgain info
-                        - add the formated asnwer at the utm_content
-                    
-                    [ ] make a thanks message at the end when we go to the utm camogain url.
-                        - add a homepage button  
+                [ ] code the UI of the card
+                [ ] code the UI of the qustion
+                [ ] code the qustions and the answers
+                [ ] save the answers
+                [ ] format the answers
+                    - replace any space with %20 
+                [ ] creat a urm-campagin url with the answers
+                    - the site url
+                    - campgain info
+                    - add the formated asnwer at the utm_content
+                [ ] make a thanks message at the end when we go to the utm camogain url.
+                    - add a homepage button  
 
