@@ -2,9 +2,13 @@
 
 
 
+
+
+
+
 # Advanced Things 
-    [ ] Report Sys
-        [ ] stratgy
+    [x] Report Sys
+        [X] stratgy
             # how it will work?
                 1. when the user click report btn we will add #report
                 in the url
@@ -43,20 +47,20 @@
 
 
         [x] Design it 
-        [o] Code it 
+        [X] Code it 
             # what i need to do?
-                [ ] make a report comp that will show when there is a #report
+                [x] make a report comp that will show when there is a #report
                     in the url
-                [ ] code the UI of the card
-                [ ] code the UI of the qustion
-                [ ] code the qustions and the answers
-                [ ] save the answers
-                [ ] format the answers
+                [x] code the UI of the card
+                [X] code the UI of the qustion
+                [X] code the qustions and the answers
+                [X] save the answers
+                [X] format the answers
                     - replace any space with %20 
-                [ ] creat a urm-campagin url with the answers
+                [X] creat a urm-campagin url with the answers
                     - the site url
                     - campgain info
                     - add the formated asnwer at the utm_content
-                [ ] make a thanks message at the end when we go to the utm camogain url.
+                [X] make a thanks message at the end when we go to the utm camogain url.
                     - add a homepage button  
 
