@@ -7,6 +7,9 @@
 
 
 # Advanced Things 
+
+    [ ] testing the report sys
+
     [x] Report Sys
         [X] stratgy
             # how it will work?
@@ -63,4 +66,5 @@
                     - add the formated asnwer at the utm_content
                 [X] make a thanks message at the end when we go to the utm camogain url.
                     - add a homepage button  
+
 
