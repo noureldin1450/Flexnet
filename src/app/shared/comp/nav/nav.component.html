@@ -7,13 +7,13 @@
         <ul class="nav__links">
 
             <li id="search-icon"><a [routerLink]="'.'" [fragment]="'search'">
-                    <svg class="ion-icon">
+                    <svg class="ion-icon" [class.active]="route.url === '/#search'">
                         <use href="./assets/icons.svg#icon-search"></use>
                     </svg>
                 </a></li>
 
             <li><a [routerLink]="'/'">
-                    <svg class="ion-icon" [class.active]="route.url === '/' || route.url === '/#search'">
+                    <svg class="ion-icon" [class.active]="route.url === '/'">
                         <use href="./assets/icons.svg#icon-home"></use>
                     </svg>
                 </a></li>
@@ -31,7 +31,7 @@
                 </a></li>
 
             <li id="small"><a [routerLink]="'.'" [fragment]="'search'">
-                    <svg class="ion-icon">
+                    <svg class="ion-icon" [class.active]="route.url === '/#search'">
                         <use href="./assets/icons.svg#icon-search"></use>
                     </svg>
                 </a></li>

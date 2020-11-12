@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   moviename:string;
   url:string;
 
-  constructor(private api:ApiService, private router:Router) {}
+  constructor(private api:ApiService, public router:Router) {}
 
   ngOnInit(): void {
     this.api.SlugsData().subscribe(data =>{

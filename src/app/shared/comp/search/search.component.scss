@@ -1,5 +1,15 @@
 @import "../../../../assets/style/scss/global";
 
+.active{
+    border: 1px solid white !important;
+    background-color: $light-black-color;
+
+    input{
+        &:focus{
+            border: none !important;
+        }
+    }
+}
 .search {
     width: 100%;
     border: 1px solid $lighter-black-color;
