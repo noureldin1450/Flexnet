@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-report',
@@ -13,6 +14,7 @@ export class ReportComponent implements OnInit {
   report: boolean = false;
   qustionNumber:number = 0;
   result:any;
+  timer:number = 7;
 
   constructor(private _location:Location,private _router:Router,private _activatedRoute:ActivatedRoute) {}
 
@@ -132,12 +134,24 @@ export class ReportComponent implements OnInit {
     //  this.result = this.result.replace(/[^\w-]+/g,'')
      //lets make it a url
     //  this.result = this.result.replace(/[`~!@#$%^&*()_\-+=\[\]{};:'"\\|\/,.<>?\s]/g,'%20');
-     console.log(this.result);
+      console.log(this.result);
+      
+      console.log('Recreating the new url for tracking...')
+      const url = this._router.createUrlTree([],{relativeTo: this._activatedRoute, queryParams: {utm_source: 'report', utm_medium: 'MovieReport', utm_campaign: 'report', utm_content: this.result}}).toString();
+      this._location.go(url);
+      
      
-     console.log('Recreating the new url for tracking...')
-     const url = this._router.createUrlTree([],{relativeTo: this._activatedRoute, queryParams: {utm_source: 'report', utm_medium: 'MovieReport', utm_campaign: 'report', utm_content: this.result}}).toString();
-     this._location.go(url);
-     console.log('Report is Done.')
+      var counter = setInterval(()=>{
+        if(this.timer == 0){
+          clearInterval(counter);
+          console.log('Report Is Sent');
+          this._router.navigate(['/']);
+        }else{
+          this.timer = this.timer - 1;
+          console.log(this.timer);
+        }
+      },1000);
+
     }
   }
 

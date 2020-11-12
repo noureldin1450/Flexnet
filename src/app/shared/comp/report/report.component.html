@@ -40,7 +40,11 @@
                 <a class="btn" *ngIf="qustionNumber < 3" (click)="nextqustion()">
                     {{ (qustionNumber < 2 ? 'Next' : qustionNumber == 2 ? 'Finsh' : false) }}
                 </a>
-                <a class="btn" *ngIf="qustionNumber >= 3" [routerLink]="'/'">Home Page</a>
+                
+                <p class="redirectmsg" *ngIf="qustionNumber >= 3">
+                    {{ (timer == 0 ? 'Done 🤗' : timer !== 0 ? '⌛ Please wait ' + timer + 'S...' : false) }}
+                </p>
+            
             </ul>
         </div>
     </div>
