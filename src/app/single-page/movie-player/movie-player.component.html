@@ -2,37 +2,42 @@
 <section class="movie-player" [attr.id]="'movieplayer'" *ngIf="MovieData">
     <div class="container">
         <div class="servers animated fadeIn delay-1">
-            <ul *ngIf="MovieData.servers">
+            <ng-scrollbar>
+                <ul *ngIf="MovieData.servers">
 
-                <ng-template [ngIf]="MovieData.fushaarid">
-                    <li [class.active]="activeServer === 'fushaarserver'" [class.server1-active]="activeServer === 'fushaarserver'" id="server1"
-                        (click)="activeServer = 'fushaarserver'">
-                        <svg class="ion-icon">
-                            <use href="/assets/icons.svg#icon-premium"></use>
-                        </svg>
-                        Premium S1
-                    </li>
-                </ng-template>
+                    <ng-template [ngIf]="MovieData.fushaarid">
+                        <li [class.active]="activeServer === 'fushaarserver'"
+                            [class.server1-active]="activeServer === 'fushaarserver'" id="server1"
+                            (click)="activeServer = 'fushaarserver'">
+                            <svg class="ion-icon">
+                                <use href="/assets/icons.svg#icon-premium"></use>
+                            </svg>
+                            Premium S1
+                        </li>
+                    </ng-template>
 
-                <ng-template [ngIf]="vikv == true">
-                    <li [class.active]="activeServer === 'vikvserver'" [class.server1-active]="activeServer === 'vikvserver'" id="server1"
-                        (click)="activeServer = 'vikvserver'">
-                        <svg class="ion-icon">
-                            <use href="/assets/icons.svg#icon-premium"></use>
-                        </svg>
-                        Premium S2
-                    </li>
-                </ng-template>
-                
-                <!-- 
+                    <ng-template [ngIf]="vikv == true">
+                        <li [class.active]="activeServer === 'vikvserver'"
+                            [class.server1-active]="activeServer === 'vikvserver'" id="server1"
+                            (click)="activeServer = 'vikvserver'">
+                            <svg class="ion-icon">
+                                <use href="/assets/icons.svg#icon-premium"></use>
+                            </svg>
+                            Premium S2
+                        </li>
+                    </ng-template>
+
+                    <!-- 
                 <ng-template [ngIf]="!MovieData.fushaarid">
                     <li [class.active]="activeServer === 1" (click)="activeServer = 1">Server 1</li>
                 </ng-template> -->
 
-                <!-- ranging on the servers andd adding btns for every one -->
-                <li *ngFor="let wserver of MovieData.servers; let i = index" [class.active]="activeServer === i+1" (click)="activeServer = i+1">S{{i+1}}</li>
+                    <!-- ranging on the servers andd adding btns for every one -->
+                    <li *ngFor="let wserver of MovieData.servers; let i = index" [class.active]="activeServer === i+1"
+                        (click)="activeServer = i+1">S{{i+1}}</li>
 
-            </ul>
+                </ul>
+            </ng-scrollbar>
         </div>
 
         <div id="movie-player" class="animated fadeIn delay-1-5">
@@ -71,7 +76,7 @@
             <div class="report">
                 <app-report></app-report>
             </div>
-            <p>support us by sharing the movie with your friends and family 
+            <p>support us by sharing the movie with your friends and family
                 <!-- <img src="/assets/images/fushaarlogo.png" width="25px"> -->
             </p>
         </div>

@@ -9,6 +9,7 @@ import { PipesModule } from '../shared/pipes/pipes.module';
 import { MoviePlayerComponent } from './movie-player/movie-player.component';
 import { PlyrModule } from 'ngx-plyr';
 import { DownloadComponent } from './download/download.component';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 const routes:Routes = [
   {
@@ -26,8 +27,11 @@ const routes:Routes = [
     RouterModule,
     PlyrModule,
     PipesModule,
+    NgScrollbarModule.withConfig({
+      track: 'horizontal',
+    }),
     RouterModule.forChild(routes)
   ],
-  exports:[RouterModule]
+  exports:[RouterModule, NgScrollbarModule]
 })
 export class SinglePageModule { }

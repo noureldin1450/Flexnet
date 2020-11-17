@@ -88,9 +88,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include mobile {
-                    display: block;
-                }
 
                 .active {
                     background: $light-black-color !important;
@@ -110,18 +107,15 @@
                     border: 2px solid $light-black-color;
                     float: left;
                     transition: 0.5s;
-
-                    @include large-tap {
-                        font-size: 0.9rem;
-                    }
-                    @include mobile {
-                        display: block;
-                        margin: 0.5rem 0px;
-                        margin: 0.5rem 0px !important;
-                        width: 100%;
-                        padding: 0.3rem 0px;
+                    
+                    @include small-laptop{
+                        font-size: .9rem;
                     }
 
+                    @include large-tap{
+                        flex-direction: column;
+                    }
+                    
                     &:last-of-type {
                         margin: 1rem 0rem 0px 0px;
                     }
@@ -130,6 +124,10 @@
                         width: 20px;
                         height: 17px;
                         margin-right: 0.5rem;
+
+                        @include mobile{
+                            display: none;
+                        }
                     }
                 } //the servers buttons
                 .server1-active {
