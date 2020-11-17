@@ -13,7 +13,7 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
 
   @Input() MovieData:any;
 
-  server: number = 1;
+  activeServer: number = 1;
   player: boolean = false;
   videoSources: Plyr.Source[] = [];
 
@@ -48,7 +48,7 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
     console.log('Removing The Old Src');
     this.videoSources = [];
     //making the server the premium server
-    this.server = 1; 
+    this.activeServer = 1; 
     
     console.log('Pushing The New Data...', q240,q480,q1080);
     if (typeof q240 !== 'undefined') {

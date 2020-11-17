@@ -2,11 +2,11 @@
 <section class="movie-player" [attr.id]="'movieplayer'" *ngIf="MovieData">
     <div class="container">
         <div class="servers animated fadeIn delay-1">
-            <ul *ngIf="MovieData.server2; else nootherservers">
+            <ul *ngIf="MovieData.servers">
 
                 <ng-template [ngIf]="MovieData.fushaarid">
-                    <li [class.active]="server === 1" [class.server1-active]="server === 1" id="server1"
-                        (click)="server = 1">
+                    <li [class.active]="activeServer === 1" [class.server1-active]="activeServer === 1" id="server1"
+                        (click)="activeServer = 1">
                         <svg class="ion-icon">
                             <use href="/assets/icons.svg#icon-premium"></use>
                         </svg>
@@ -15,49 +15,43 @@
                 </ng-template>
 
                 <ng-template [ngIf]="!MovieData.fushaarid">
-                    <li [class.active]="server === 1" (click)="server = 1">Server 1</li>
+                    <li [class.active]="activeServer === 1" (click)="activeServer = 1">Server 1</li>
                 </ng-template>
-                <ng-template [ngIf]="MovieData.server2">
-                    <li [class.active]="server === 2" (click)="server = 2">Server 2</li>
-                </ng-template>
-                <ng-template [ngIf]="MovieData.server3">
-                    <li [class.active]="server === 3" (click)="server = 3">Server 3</li>
-                </ng-template>
-                <ng-template [ngIf]="MovieData.server4">
-                    <li [class.active]="server === 4" (click)="server = 4">Server 4</li>
-                </ng-template>
-                <ng-template [ngIf]="MovieData.server5">
-                    <li [class.active]="server === 5" (click)="server = 5">Server 5</li>
-                </ng-template>
+
+                <!-- ranging on the servers andd adding btns for every one -->
+                <li *ngFor="let wserver of MovieData.servers; let i = index" [class.active]="activeServer === i+2" (click)="activeServer = i+2">S{{i+1}}</li>
+
             </ul>
-            <ng-template #nootherservers>
-            </ng-template>
         </div>
 
         <div id="movie-player" class="animated fadeIn delay-1-5">
-            <ng-template [ngIf]="( MovieData.fushaarid && server === 1)">
+            <ng-template [ngIf]="( MovieData.fushaarid && activeServer === 1)">
                 <div *ngIf="player" class="plyr animated fadeIn" plyr [plyrTitle]="MovieData.title"
                     [plyrPlaysInline]="'true'" [plyrSources]="videoSources" [plyrPoster]="MovieData.moviebg">
                 </div>
             </ng-template>
 
-            <ng-template [ngIf]="( !MovieData.fushaarid && server === 1)">
-                <ng-template [ngIf]="MovieData.server2">
-                    <span [innerHTML]="MovieData.server2 | moviePlayer"></span>
+            <ng-template [ngIf]="( !MovieData.fushaarid && activeServer === 1)">
+                <ng-template [ngIf]="MovieData.servers[0]">
+                    <span [innerHTML]="MovieData.servers[0] | moviePlayer"></span>
                 </ng-template>
-                <span *ngIf="!MovieData.server2" [innerHTML]="MovieData.imdbid | moviePlayer:'imdb'"></span>
             </ng-template>
 
-            <span *ngIf="server === 2" [innerHTML]="MovieData.server2 | moviePlayer"></span>
+            <!-- ranging for every server and added its own ifrme with its source -->
+            <div *ngFor="let movieiframe of MovieData.servers; let i = index">
+                <span *ngIf="activeServer === i+2" [innerHTML]="movieiframe | moviePlayer">{{ movieiframe }} {{i}}</span>
+            </div>
+
+            <!-- <span *ngIf="server === 2" [innerHTML]="MovieData.server2 | moviePlayer"></span>
 
             <span *ngIf="server === 3" [innerHTML]="MovieData.server3 | moviePlayer"></span>
 
             <span *ngIf="server === 4" [innerHTML]="MovieData.server4 | moviePlayer"></span>
 
-            <span *ngIf="server === 5" [innerHTML]="MovieData.server5 | moviePlayer"></span>
+            <span *ngIf="server === 5" [innerHTML]="MovieData.server5 | moviePlayer"></span> -->
         </div>
 
-        <div class="attrib" *ngIf="server === 1">
+        <div class="attrib" *ngIf="activeServer === 1">
             <div class="report">
                 <app-report></app-report>
             </div>
