@@ -2,7 +2,7 @@
 <section class="movie-player" [attr.id]="'movieplayer'" *ngIf="MovieData">
     <div class="container">
         <div class="servers animated fadeIn delay-1">
-            <ng-scrollbar>
+            <ng-scrollbar class="my-scrollbar">
                 <ul *ngIf="MovieData.servers">
 
                     <ng-template [ngIf]="MovieData.fushaarid">
