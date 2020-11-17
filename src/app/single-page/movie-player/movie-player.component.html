@@ -5,41 +5,57 @@
             <ul *ngIf="MovieData.servers">
 
                 <ng-template [ngIf]="MovieData.fushaarid">
-                    <li [class.active]="activeServer === 1" [class.server1-active]="activeServer === 1" id="server1"
-                        (click)="activeServer = 1">
+                    <li [class.active]="activeServer === 'fushaarserver'" [class.server1-active]="activeServer === 'fushaarserver'" id="server1"
+                        (click)="activeServer = 'fushaarserver'">
                         <svg class="ion-icon">
                             <use href="/assets/icons.svg#icon-premium"></use>
                         </svg>
-                        Premium Server
+                        Premium S1
                     </li>
                 </ng-template>
 
+                <ng-template [ngIf]="vikv == true">
+                    <li [class.active]="activeServer === 'vikvserver'" [class.server1-active]="activeServer === 'vikvserver'" id="server1"
+                        (click)="activeServer = 'vikvserver'">
+                        <svg class="ion-icon">
+                            <use href="/assets/icons.svg#icon-premium"></use>
+                        </svg>
+                        Premium S2
+                    </li>
+                </ng-template>
+                
+                <!-- 
                 <ng-template [ngIf]="!MovieData.fushaarid">
                     <li [class.active]="activeServer === 1" (click)="activeServer = 1">Server 1</li>
-                </ng-template>
+                </ng-template> -->
 
                 <!-- ranging on the servers andd adding btns for every one -->
-                <li *ngFor="let wserver of MovieData.servers; let i = index" [class.active]="activeServer === i+2" (click)="activeServer = i+2">S{{i+1}}</li>
+                <li *ngFor="let wserver of MovieData.servers; let i = index" [class.active]="activeServer === i+1" (click)="activeServer = i+1">S{{i+1}}</li>
 
             </ul>
         </div>
 
         <div id="movie-player" class="animated fadeIn delay-1-5">
-            <ng-template [ngIf]="( MovieData.fushaarid && activeServer === 1)">
+
+            <ng-template [ngIf]="( MovieData.fushaarid && activeServer === 'fushaarserver')">
                 <div *ngIf="player" class="plyr animated fadeIn" plyr [plyrTitle]="MovieData.title"
                     [plyrPlaysInline]="'true'" [plyrSources]="videoSources" [plyrPoster]="MovieData.moviebg">
                 </div>
             </ng-template>
 
-            <ng-template [ngIf]="( !MovieData.fushaarid && activeServer === 1)">
+            <ng-template [ngIf]="(vikv == true && activeServer == 'vikvserver')">
+                <span [innerHTML]="MovieData.imdbid | moviePlayer:'vikv'"></span>
+            </ng-template>
+
+            <!-- <ng-template [ngIf]="( !MovieData.fushaarid && activeServer === 1)">
                 <ng-template [ngIf]="MovieData.servers[0]">
                     <span [innerHTML]="MovieData.servers[0] | moviePlayer"></span>
                 </ng-template>
-            </ng-template>
+            </ng-template> -->
 
             <!-- ranging for every server and added its own ifrme with its source -->
             <div *ngFor="let movieiframe of MovieData.servers; let i = index">
-                <span *ngIf="activeServer === i+2" [innerHTML]="movieiframe | moviePlayer">{{ movieiframe }} {{i}}</span>
+                <span *ngIf="activeServer === i+1" [innerHTML]="movieiframe | moviePlayer"></span>
             </div>
 
             <!-- <span *ngIf="server === 2" [innerHTML]="MovieData.server2 | moviePlayer"></span>
@@ -51,12 +67,12 @@
             <span *ngIf="server === 5" [innerHTML]="MovieData.server5 | moviePlayer"></span> -->
         </div>
 
-        <div class="attrib" *ngIf="activeServer === 1">
+        <div class="attrib">
             <div class="report">
                 <app-report></app-report>
             </div>
-            <p>thanks goes to fushaar without them we wouldn't be here today 
-                <img src="/assets/images/fushaarlogo.png" width="25px">
+            <p>support us by sharing the movie with your friends and family 
+                <!-- <img src="/assets/images/fushaarlogo.png" width="25px"> -->
             </p>
         </div>
 

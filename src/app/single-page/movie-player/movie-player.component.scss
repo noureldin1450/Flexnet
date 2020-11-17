@@ -68,16 +68,16 @@
                     max-width: 100%;
                 }
             }
-            img {
-                width: 30px;
-                padding-left: 1rem;
-                @include small-laptop{
-                    width: 20px;
-                }
-                @include tap {
-                    display: none;
-                }
-            }
+            // img {
+            //     width: 30px;
+            //     padding-left: 1rem;
+            //     @include small-laptop{
+            //         width: 20px;
+            //     }
+            //     @include tap {
+            //         display: none;
+            //     }
+            // }
         } //end of attrib
 
         .servers {

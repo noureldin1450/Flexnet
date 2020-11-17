@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { CommentStmt } from '@angular/compiler';
 import { Component, OnInit, OnChanges, SimpleChanges, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -9,15 +11,43 @@ import { Component, OnInit, OnChanges, SimpleChanges, Input, ViewEncapsulation }
 
 export class MoviePlayerComponent implements OnInit,OnChanges {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   @Input() MovieData:any;
 
-  activeServer: number = 1;
+  activeServer:any;
   player: boolean = false;
   videoSources: Plyr.Source[] = [];
+  vikv:boolean;
 
-  ngOnInit(): void { }
+  ngOnInit(): void {this.serverCheck()}
+
+
+  //checking for if the movie do exist on vikv or not
+  UrlCheck(url:string){
+    console.log('am checking on', url)
+    this.http.get(url, {observe: 'response'}).subscribe(val =>{},
+      (val =>{
+        if(val.status == 200){
+          console.log('i found the movie at vikv am adding it...');
+          this.vikv = true;
+        }else{
+          console.log('Vikv dont have the movie');
+          this.vikv = false;
+        }
+    }));
+  }
+
+  serverCheck(){
+    console.log('am checking for vikv source and assigning the server...');
+    this.UrlCheck(`https://hls.hdv.fun/imdb/${this.MovieData.imdbid}`);
+    if(this.MovieData.fushaarid != null || undefined || ''){
+      this.activeServer = 'fushaarserver';
+    }else if(this.vikv == true){ 
+      this.activeServer = 'vikvserver';
+    }
+    console.log('Done.');
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     // console.log(changes);
@@ -48,7 +78,7 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
     console.log('Removing The Old Src');
     this.videoSources = [];
     //making the server the premium server
-    this.activeServer = 1; 
+    this.serverCheck();
     
     console.log('Pushing The New Data...', q240,q480,q1080);
     if (typeof q240 !== 'undefined') {
