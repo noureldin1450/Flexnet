@@ -12,11 +12,12 @@ export class SinglePageComponent implements OnInit {
 
   MovieData:any;
   Slug:string; 
+  notfound:boolean = false;
 
   constructor(private api:ApiService, private route:ActivatedRoute, private SEO:SeoService){}
 
-  ngOnInit(): void {
 
+  ngOnInit(): void {
     //with every change in the url the data will reload and get the right data 
     this.route.paramMap.subscribe(params =>{
       console.log('Changing in the URL detcted...');
@@ -26,6 +27,7 @@ export class SinglePageComponent implements OnInit {
       
       //the main movie slug
       console.log('Am Getting Movie Data...');
+
       this.api.MovieData(this.Slug).subscribe(data =>{
         this.MovieData = data;
 
@@ -33,11 +35,15 @@ export class SinglePageComponent implements OnInit {
         //adding the seo after the data has been loaded.      
         this.SEO.SEO((`${this.MovieData.title} ${this.MovieData.year}`), (`${this.MovieData.title} ${this.MovieData.story}`), this.MovieData.moviecover);
         console.log(data)
+      },
+      error => {
+        console.log('BAD URL WE CANT GET THE DATA. :(');
+        this.notfound = true;
       });
 
       console.log('Done data has loaded.');
-    })
-
+    });
   }
+
 
 }

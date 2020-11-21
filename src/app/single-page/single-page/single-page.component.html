@@ -1,9 +1,26 @@
 
 
-<app-movie-header *ngIf="MovieData" [MovieData]="MovieData"></app-movie-header>
 
-<app-movie-player *ngIf="MovieData" [MovieData]="MovieData"></app-movie-player>
+<ng-template [ngIf]="!notfound" [ngIfElse]="error">
+    <app-movie-header *ngIf="MovieData" [MovieData]="MovieData"></app-movie-header>
+    
+    <app-movie-player *ngIf="MovieData" [MovieData]="MovieData"></app-movie-player>
+    
+    <app-download *ngIf="MovieData.fushaarid" [MovieData]="MovieData"></app-download>
 
-<app-download *ngIf="MovieData.fushaarid" [MovieData]="MovieData"></app-download>
+    <app-small-card *ngIf="MovieData" [MoviesData]="MovieData?.related" [title]="'More to watch:'"></app-small-card>
+</ng-template>
 
-<app-small-card *ngIf="MovieData" [MoviesData]="MovieData?.related" [title]="'More to watch:'"></app-small-card>
+<ng-template #error>
+    <div class="error">
+        <div class="container">
+            <h1>Sorry we dont have {{ Slug }} Movie</h1>
+            <p>if you want us to add it go to <a [routerLink]="'/request'">request</a> page and request it and we will add it as <br> fast
+                as we can</p>
+            <div class="error-btn">
+                <a [routerLink]="'/request'">Request</a>
+                <a [routerLink]="'/'">HomePage</a>
+            </div>
+        </div>
+    </div>
+</ng-template>
