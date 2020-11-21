@@ -1,6 +1,5 @@
 @import "../../../assets/style/scss/global";
 
-
 /* main movie code */
 .movie-player {
     text-align: center;
@@ -46,13 +45,13 @@
                 padding: 0.7rem 0px;
                 width: 80%;
 
-                @include small-laptop{
+                @include small-laptop {
                     font-size: 12px;
                 }
-                @include mobile{
+                @include mobile {
                     width: 90%;
                 }
-                @include mid-mobile{
+                @include mid-mobile {
                     width: 100%;
                 }
             }
@@ -60,11 +59,11 @@
                 float: right;
                 width: 20%;
                 max-width: 100px;
-             
-                @include mobile{
+
+                @include mobile {
                     width: 8%;
                 }
-                @include mid-mobile{
+                @include mid-mobile {
                     width: 100%;
                     max-width: 100%;
                 }
@@ -108,15 +107,15 @@
                     border: 2px solid $light-black-color;
                     float: left;
                     transition: 0.5s;
-                    
-                    @include small-laptop{
-                        font-size: .9rem;
+
+                    @include small-laptop {
+                        font-size: 0.9rem;
                     }
 
-                    @include large-tap{
+                    @include large-tap {
                         flex-direction: column;
                     }
-                    
+
                     &:last-of-type {
                         margin: 1rem 0rem 0px 0px;
                     }
@@ -126,7 +125,7 @@
                         height: 17px;
                         margin-right: 0.5rem;
 
-                        @include mobile{
+                        @include mobile {
                             display: none;
                         }
                     }
@@ -153,6 +152,10 @@
         border-radius: $normal-radius;
         border: 3px solid $light-black-color;
         height: 70vh;
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthesinglecell.files.wordpress.com%2F2012%2F01%2Floadingmedia.gif&f=1&nofb=1");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
         @include laptop {
             width: 100%;

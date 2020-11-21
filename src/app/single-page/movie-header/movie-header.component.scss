@@ -60,6 +60,10 @@
             margin: 0.5rem 0px 1.5rem 0px;
         }
         .trailer {
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthesinglecell.files.wordpress.com%2F2012%2F01%2Floadingmedia.gif&f=1&nofb=1");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             height: 50%;
             border-radius: $normal-radius;
             @include large-tap{
