@@ -39,11 +39,14 @@ export class MoviePlayerComponent implements OnInit,OnChanges {
   }
 
   serverCheck(){
+    
     console.log('am checking for vikv source and assigning the server...');
+    
     this.UrlCheck(`https://hls.hdv.fun/imdb/${this.MovieData.imdbid}`);
+
     if(this.MovieData.fushaarid != null || undefined || ''){
       this.activeServer = 'fushaarserver';
-    }else if(this.vikv == true){ 
+    }else{ 
       this.activeServer = 'vikvserver';
     }
     console.log('Done.');
