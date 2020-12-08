@@ -8,7 +8,7 @@ import { PipesModule } from './../../pipes/pipes.module';
 
 const DEFAULT_SWIPER_CONFIG:SwiperConfigInterface = {
   direction: 'horizontal',
-  slidesPerView: 'auto'
+  slidesPerView: 'auto',
 };
 
 @NgModule({

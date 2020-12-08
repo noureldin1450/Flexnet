@@ -137,7 +137,20 @@ footer {
 
 .swiper-button-next,
 .swiper-button-prev {
-    display: none !important;
+    z-index: 50;
+    color: $white-color !important;
+    background: $dark-pink-color;
+    transform: scale(0.7);
+    border: 3px solid $white-color;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+
+    @include tap{
+        display: none !important;
+    }
+}
+.swiper-button-disabled{
+    pointer-events: auto !important;
 }
 
 .slider-title {

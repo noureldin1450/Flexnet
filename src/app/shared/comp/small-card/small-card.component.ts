@@ -37,8 +37,8 @@ export class SmallCardComponent implements OnInit {
   config: SwiperConfigInterface = {
     direction: 'horizontal',
     slidesPerView: 4.7,
-    navigation: false,
-    pagination: false,
+    navigation: true,
+    // pagination: false,
     scrollbar: false,
     uniqueNavElements: false,
     freeModeMomentumRatio: 1,

@@ -34,8 +34,10 @@ export class HomepageComponent implements OnInit {
       { name: 'romntic' },
     ]
   }
-
-  WindowSize: number = window.innerWidth;
+  
+  //hard coded so the sliders apper in a poster view not a wallpaper view aka wide card
+  WindowSize: number = 400;
+  // WindowSize: number = window.innerWidth;
 
   ngOnInit(): void {
     
