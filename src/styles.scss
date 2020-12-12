@@ -144,12 +144,14 @@ footer {
     border: 3px solid $white-color;
     padding: 1rem 1rem;
     border-radius: 5px;
+    opacity: .8 !important;
 
     @include tap{
         display: none !important;
     }
 }
 .swiper-button-disabled{
+    opacity: .8 !important;
     pointer-events: auto !important;
 }
 
