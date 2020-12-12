@@ -2,13 +2,56 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { filter } from 'rxjs/operators';
+import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
 
 declare var gtag;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations:[
+    trigger('fade', [
+      state('void', style({
+        opacity: 0
+      })),
+      
+      // transition('* <=> *', [        
+      //   animate(10000, style({
+      //     opacity: 1
+      //   }))
+      // ]),
+
+      transition(':enter, :leave', [  
+        
+        group([
+          query(':enter',[
+            animate(2000, style({ opacity: 1 }))
+          ]),
+          query(':leave',[
+            animate(2000, style({ opacity: 0 }))
+          ])
+        ]),
+        
+        // animate(1000, style({
+        //   opacity: 1
+        // }))
+      ]),
+
+      // transition(':enter', [        
+      //   animate(1000, style({
+      //     opacity: 1
+      //   }))
+      // ]),
+
+      // transition(':leave', [
+      //   animate(50000, style({
+      //     opacity: 0
+      //   }))
+      // ]),
+
+    ])
+  ]
 })
 
 export class AppComponent {
