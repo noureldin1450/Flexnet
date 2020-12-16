@@ -13,19 +13,31 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
   {
   path:'', 
-  loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule)
+  loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule),
+  data:{
+    route: 'homepage'
+  }
   },
   {
     path: 'request',
-    component: RequstComponent
+    component: RequstComponent,
+    data:{
+      route: 'reqpage'
+    }
   },
   {
     path: 'movies/:slug',
-    loadChildren: () => import('./single-page/single-page.module').then(m => m.SinglePageModule)
+    loadChildren: () => import('./single-page/single-page.module').then(m => m.SinglePageModule),
+  data:{
+    route: 'moviepage'
+  }
   },
   {
     path: 'tags/:tag',
-    loadChildren: () => import('./list-page/list-page.module').then(m => m.ListPageModule)
+    loadChildren: () => import('./list-page/list-page.module').then(m => m.ListPageModule),
+    data:{
+      route: 'tagspage'
+    }
   },
   {
     path:'**', redirectTo: '' 

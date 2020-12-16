@@ -18,6 +18,8 @@ export class HeaderComponent implements OnInit {
 
   @Input() title?: string = '' || 'Flexnet Top Movies';
   
+  WindowSize:number = window.innerWidth;
+
   @Input() MoviesData: any;
 
   config: SwiperConfigInterface = {

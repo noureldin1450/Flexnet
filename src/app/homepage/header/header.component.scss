@@ -1,6 +1,6 @@
-@import '../../../assets/style/scss/global';
+@import "../../../assets/style/scss/global";
 
-.card{
+.card {
     height: 60vh !important;
     min-height: 400px !important;
     max-height: 450px !important;
@@ -9,7 +9,67 @@
     background-size: cover;
     border-radius: $normal-radius;
 
-    @include tap{
+    @include tap {
         max-height: 300px !important;
     }
+
+    .movie {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        margin: 0 !important;
+
+        &__play,
+        &__details {
+            background-color: rgba(18, 18, 18, 0.7);
+            font-size: 15px;
+            font-weight: 900;
+            width: 100%;
+            padding: 0.4rem 0px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            position: absolute;
+            transition: 0.7s;
+            p,
+            p a,
+            p a .icon-icon{
+                fill: rgb(250, 250, 250);
+            }
+        }
+
+        &__play {
+            opacity: 0;
+            animation-name: OutAnimation;
+            animation-duration: .3s;
+            background-color: rgb(139, 50, 94, .8);
+            
+            p {
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .ion-icon {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+
+        &:hover .movie__play {
+            animation-name: InAnimation;
+            animation-timing-function: ease-in-out;
+        }
+        &:hover .movie__details {
+            animation-name: OutAnimation;
+            animation-duration: .3s;
+            animation-timing-function: ease-in-out;
+        }
+    }
 }
+
+// .movie:hover .movie__play{
+//     display: block !important;
+// }

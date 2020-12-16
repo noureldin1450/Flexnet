@@ -10,48 +10,38 @@ declare var gtag;
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations:[
-    trigger('fade', [
-      state('void', style({
-        opacity: 0
-      })),
-      
-      // transition('* <=> *', [        
-      //   animate(10000, style({
-      //     opacity: 1
-      //   }))
-      // ]),
+  // animations: [
+    // trigger('fade', [
+      // transition('void <=> *, homepage <=> *', [
+      //   group([
+      //     query(':enter',[
+      //       animate(2000, style({ opacity: 0 }))
+      //     ]),
+      //     query(':leave',[
+      //       animate(2000, style({ opacity: 1 }))
+      //     ]),
+      //   ])
+      // ])
 
-      transition(':enter, :leave', [  
-        
-        group([
-          query(':enter',[
-            animate(2000, style({ opacity: 1 }))
-          ]),
-          query(':leave',[
-            animate(2000, style({ opacity: 0 }))
-          ])
-        ]),
-        
-        // animate(1000, style({
-        //   opacity: 1
-        // }))
-      ]),
+      // transition('* <=> *', [
+      //     query(':enter',[
+      //       style({
+      //         opacity: 0
+      //       }),
+      //       animate(3000, style({
+      //          opacity: 1 
+      //       }))
+      //     ]),
+      //     query(':leave',[
+      //       style({
+      //         opacity: 1
+      //       }),
+      //       animate(1000, style({ opacity: 0 }))
+      //     ])
+      // ])
 
-      // transition(':enter', [        
-      //   animate(1000, style({
-      //     opacity: 1
-      //   }))
-      // ]),
-
-      // transition(':leave', [
-      //   animate(50000, style({
-      //     opacity: 0
-      //   }))
-      // ]),
-
-    ])
-  ]
+    // ])
+  // ]
 })
 
 export class AppComponent {
@@ -65,7 +55,7 @@ export class AppComponent {
     const navEndEvents = router.events.pipe(
       filter(event => event instanceof NavigationEnd),
     );
-  
+
     // for every changing in the navigation
     navEndEvents.subscribe((event: NavigationEnd) => {
       gtag('config', this.analytics, {
@@ -76,7 +66,7 @@ export class AppComponent {
     console.log(this.msg);
   }
 
-    msg: string = `
+  msg: string = `
     𝑯𝒊, 𝑻𝒉𝒆𝒓𝒆
     𝑯𝒐𝒑𝒆 𝒀𝒐𝒖 𝑨 𝑮𝒓𝒆𝒂𝒕 𝑫𝒂𝒚 😉❤️
     `;

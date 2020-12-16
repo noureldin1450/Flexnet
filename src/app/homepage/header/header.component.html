@@ -1,6 +1,29 @@
 <header class="animated fadeIn" *ngIf="MoviesData">
     <h1 class="slider-title">{{ title }}</h1>
-    <swiper [config]="config">
-        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" title="Flexnet Watch {{movie.title}}" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover"></a>
+    
+    <swiper [config]="config" *ngIf='WindowSize > 770'>
+        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" title="Flexnet Watch {{movie.title}}" [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover">
+            <div class="movie">
+                <div class="animated movie__details">
+                    <p> 
+                        {{ movie.duration }} - {{ movie.rating }}/10 - PG-{{ movie.pg }}
+                    </p>
+                </div>
+                <div class="animated movie__play">
+                    <p> 
+                        <a [routerLink]='movie.slug'>
+                            Watch Now
+                            <svg class="ion-icon"><use href="../../../assets/icons.svg#icon-play"></use></svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </a>
     </swiper>
+    
+    <swiper [config]="config" *ngIf='WindowSize <= 770'>
+        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" title="Flexnet Watch {{movie.title}}" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover">
+        </a>
+    </swiper>
+
 </header>

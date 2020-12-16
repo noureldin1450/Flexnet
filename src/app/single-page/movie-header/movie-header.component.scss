@@ -3,13 +3,13 @@
 .overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.830);
+    background: rgba(0, 0, 0, 0.83);
     // border-radius: $normal-radius;
 }
 
 .movie {
     margin: 1rem 0px;
-    @include small-laptop{
+    @include small-laptop {
         margin-bottom: 0px;
     }
     .big-info,
@@ -33,14 +33,14 @@
         width: 73%;
         float: left;
 
-        @include laptop{
+        @include laptop {
             width: 67%;
         }
-        @include small-laptop{
+        @include small-laptop {
             width: 100%;
             float: none;
         }
-        @include large-tap{
+        @include large-tap {
             align-items: center;
             text-align: center;
             height: auto;
@@ -50,19 +50,19 @@
             font-size: 2rem;
             font-weight: 500;
 
-            @include large-tap{
+            @include large-tap {
                 padding-top: 2rem;
             }
         }
         p {
-            font-size: .9rem;
+            font-size: 0.9rem;
             font-weight: 600;
             margin: 0.5rem 0px 1.5rem 0px;
         }
         .trailer {
             height: 50%;
             border-radius: $normal-radius;
-            @include large-tap{
+            @include large-tap {
                 height: 250px;
             }
 
@@ -82,7 +82,7 @@
         .btn {
             margin-top: 2rem;
             color: $black-color !important;
-            @include large-tap{
+            @include large-tap {
                 margin-left: auto;
                 margin-right: auto;
                 padding-bottom: 2rem;
@@ -102,10 +102,10 @@
         width: 24%;
         float: right;
 
-        @include laptop{
+        @include laptop {
             width: 30%;
         }
-        @include small-laptop{
+        @include small-laptop {
             float: none;
             width: 100%;
             display: flex;
@@ -113,7 +113,7 @@
             margin-top: 2rem;
         }
 
-        .container{
+        .container {
             width: 90% !important;
         }
 
@@ -124,16 +124,16 @@
                 &:last-of-type {
                     margin: 0;
                 }
-                @include small-laptop{
+                @include small-laptop {
                     margin-bottom: 1rem !important;
-                    &:first-child{
+                    &:first-child {
                         margin-top: 1rem;
                     }
-                    &:last-of-type{
+                    &:last-of-type {
                         margin-bottom: 1rem !important;
 
-                        ul{
-                            li{
+                        ul {
+                            li {
                                 margin: 0 !important;
                             }
                         }
@@ -160,8 +160,8 @@
                         a {
                             color: $super-white-color;
                             text-decoration: underline;
-                            font-size: .9rem;
-                        }//the main a link
+                            font-size: 0.9rem;
+                        } //the main a link
                     } //the tag
                 } //the tags ul
             }
