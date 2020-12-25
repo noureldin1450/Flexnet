@@ -22,6 +22,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() MoviesData: any;
 
+  
   config: SwiperConfigInterface = {
     direction: 'horizontal',
     slidesPerView: 4.7,

@@ -3,11 +3,12 @@ import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/
 import { RequstComponent } from './shared/comp/requst/requst.component';
 
 const routerOptions: ExtraOptions = {
-  scrollPositionRestoration: 'top',
-  anchorScrolling: 'enabled',
-  scrollOffset: [0, 50],
-  paramsInheritanceStrategy: 'always',
-  preloadingStrategy: PreloadAllModules
+    scrollPositionRestoration: 'top',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 50],
+    paramsInheritanceStrategy: 'always',
+    preloadingStrategy: PreloadAllModules,
+    relativeLinkResolution: 'legacy'
 }
 
 const routes: Routes = [

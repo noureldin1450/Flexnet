@@ -4,26 +4,15 @@
         <div class="servers animated fadeIn delay-1">
             <ng-scrollbar class="my-scrollbar">
                 <ul *ngIf="MovieData.servers">
-                    
-                    <ng-template [ngIf]="MovieData.fushaarid">
-                        <li [class.active]="activeServer === 'fushaarserver'"
-                            [class.server1-active]="activeServer === 'fushaarserver'" id="server1"
-                            (click)="activeServer = 'fushaarserver'">
-                            <svg class="ion-icon">
-                                <use href="/assets/icons.svg#icon-premium"></use>
-                            </svg>
-                            Premium S1
-                        </li>
-                    </ng-template>
 
                     <ng-template [ngIf]="vikv == true">
-                        <li [class.active]="activeServer === 'vikvserver'"
+                       <li [class.active]="activeServer === 'vikvserver'"
                             [class.server1-active]="activeServer === 'vikvserver'" id="server1"
                             (click)="activeServer = 'vikvserver'">
                             <svg class="ion-icon">
                                 <use href="/assets/icons.svg#icon-premium"></use>
                             </svg>
-                            Premium S2
+                            Premium S1
                         </li>
                     </ng-template>
 
@@ -33,8 +22,10 @@
                 </ng-template> -->
 
                     <!-- ranging on the servers andd adding btns for every one -->
-                    <li *ngFor="let wserver of MovieData.servers; let i = index" [class.active]="activeServer === i+1"
-                        (click)="activeServer = i+1">S{{i+1}}</li>
+                    <li *ngFor="let wserver of MovieData.servers; let i = index" 
+                        [class.active]="activeServer === i+1"
+                        (click)="activeServer = i+1">S{{i+1}}
+                    </li>
 
                 </ul>
             </ng-scrollbar>
