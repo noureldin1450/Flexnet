@@ -1,18 +1,18 @@
 @import "./assets/style/scss/global";
 
 .my-scrollbar {
-  --scrollbar-border-radius: 7px;
-  --scrollbar-padding: 2px;
-  --scrollbar-viewport-margin: 0;
-  --scrollbar-track-color: transparent;
-  --scrollbar-wrapper-color: transparent;
-  --scrollbar-thumb-color: rgba(255, 255, 255, 0.268) !important;
-  --scrollbar-thumb-hover-color: var(--scrollbar-thumb-color);
-  --scrollbar-size: 5px;
-  --scrollbar-hover-size: var(--scrollbar-size);
-  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
-  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
-  margin-bottom: 1rem;
+    --scrollbar-border-radius: 7px;
+    --scrollbar-padding: 2px;
+    --scrollbar-viewport-margin: 0;
+    --scrollbar-track-color: transparent;
+    --scrollbar-wrapper-color: transparent;
+    --scrollbar-thumb-color: rgba(255, 255, 255, 0.268) !important;
+    --scrollbar-thumb-hover-color: var(--scrollbar-thumb-color);
+    --scrollbar-size: 5px;
+    --scrollbar-hover-size: var(--scrollbar-size);
+    --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+    --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+    margin-bottom: 1rem;
 }
 
 .container {
@@ -24,7 +24,7 @@
     width: 30px;
     height: 30px;
 }
-.clear{
+.clear {
     clear: both;
 }
 .main {
@@ -131,28 +131,31 @@ footer {
     }
 }
 
-// .swiper-container-free-mode > .swiper-wrapper {
-//     padding-top: 20px !important;
-// }
-
 .swiper-button-next,
 .swiper-button-prev {
-    z-index: 50;
-    color: $white-color !important;
-    background: $dark-pink-color;
-    transform: scale(0.7);
-    border: 3px solid $white-color;
-    padding: 1rem 1rem;
-    border-radius: 5px;
-    opacity: .8 !important;
-
-    @include tap{
-        display: none !important;
-    }
+    display: none !important;
 }
-.swiper-button-disabled{
-    opacity: .8 !important;
-    pointer-events: auto !important;
+header {
+    //adding custom styles to the arrows on the slider
+    .swiper-button-next,
+    .swiper-button-prev {
+        z-index: 50;
+        color: $white-color !important;
+        background: $dark-pink-color;
+        transform: scale(0.7);
+        border: 3px solid $white-color;
+        padding: 1rem 1rem;
+        border-radius: 5px;
+        opacity: 1 !important;
+
+        @include tap {
+            display: none !important;
+        }
+    }
+    .swiper-button-disabled {
+        opacity: 0.4 !important;
+        pointer-events: auto !important;
+    } //styles for both arrows
 }
 
 .slider-title {
