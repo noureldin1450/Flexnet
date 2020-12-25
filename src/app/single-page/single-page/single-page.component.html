@@ -5,7 +5,7 @@
     
     <app-movie-player *ngIf="MovieData" [MovieData]="MovieData"></app-movie-player>
     
-    <app-download *ngIf="MovieData.fushaarid" [MovieData]="MovieData"></app-download>
+    <!-- <app-download *ngIf="MovieData.fushaarid" [MovieData]="MovieData"></app-download> -->
 
     <app-small-card *ngIf="MovieData" [MoviesData]="MovieData?.related" [title]="'More to watch:'"></app-small-card>
 </ng-template>
