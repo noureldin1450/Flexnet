@@ -1,0 +1,347 @@
+[33mcommit d7626b56072b6bb515563f469d4db9f6b38d8652[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Dec 31 00:17:03 2020 -0800
+
+    adding more movies on the latest movies slider :sparkles:
+
+[33mcommit 2d32667555d7341a606dc7a4eb6e919fc35b2e5c[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Dec 24 19:54:41 2020 -0800
+
+    fixed the arrows bug arrows now only on the header only also wide card is back :bug:
+
+[33mcommit 504927fc47f530287aaab4094eb3d1d9d78ec8b7[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Dec 24 17:02:24 2020 -0800
+
+    removed the download sction since fushaar fucked us and dont work anymore :fire:
+
+[33mcommit c516d8f515b69106c56c07b3d7299798048b22da[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Dec 24 16:49:50 2020 -0800
+
+    Removing fushaar servers and upgrading the project to angular 11 :bug: :arrow_up:
+
+[33mcommit 97c96cac22f73f36c4c79bba978af4342d27a15f[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Dec 24 15:22:43 2020 -0800
+
+    just a port change
+
+[33mcommit 020bb112e9a7ad754da2bc8936df63e1c9dc8f1d[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Dec 24 15:15:33 2020 -0800
+
+    making the white of the header card info and watch now have more contrast :lipstick:
+
+[33mcommit ab2fcdfa73498dbac7fe0f9c2ac00cc22fa61947[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Wed Dec 16 13:04:49 2020 -0800
+
+    New card UX improved and added animation on hover also works on mobile :sparkles:
+
+[33mcommit b3dc8c024d4be7d43fb1c990a8b80ae50b72f1d3[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Dec 12 01:54:01 2020 -0800
+
+    fixed the gif miss replacment in the trailer :bug:
+
+[33mcommit 3b4496ee6594bb9449e88005961339128a40d9c0[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Dec 11 23:55:02 2020 -0800
+
+    fixing the opactity bug :lipstick:
+
+[33mcommit 3e192a15544cd45844a4814aaf1f235645bde00f[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Dec 8 14:52:26 2020 -0800
+
+    fixing the vikv server only exist
+
+[33mcommit 1ba2da9a35755a5e3999b638d2469d14e6d7a37e[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Dec 8 02:10:24 2020 -0800
+
+    :bug: fixing the navigation problem
+
+[33mcommit 4ad165e918f920e12f6e13cf2612760ddec11cd1[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Nov 21 13:59:59 2020 -0800
+
+    :sparkles: adding the 404 for the search
+
+[33mcommit 7694a7a0c160e0350ef4024fe84b6abf575ea103[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Nov 21 13:25:30 2020 -0800
+
+    :lipstick: adding gif for the iframes in the trailer and the main movie server iframes
+
+[33mcommit f148132f032c8d0114accc3897c7220dba51bbb9[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 17 06:00:21 2020 -0800
+
+    :lipstick: adding alighter color for the scroll
+
+[33mcommit 200e863046630df55691539a832654c94355f28e[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 17 05:54:35 2020 -0800
+
+    :lipstick: adding scroll bar to the servers
+
+[33mcommit 742991ec10208ca31ca0cc475fdd2bd510582cd6[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 17 05:13:12 2020 -0800
+
+    :sparkles: auto checking for vik source and if it exist it will add it
+
+[33mcommit b51314408fc3861b874f7704011e1aee111ba71f[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 17 02:58:59 2020 -0800
+
+    :sparkles: adding the new servers list of servers array and made the word server to S
+
+[33mcommit fddb786e39cfad7ebdbe8eb8e34084d71afdc366[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Nov 12 02:34:09 2020 -0800
+
+    :lipstick: adding a better UX for the search btn in the nav & fixed the nav search btn active class problem
+
+[33mcommit 8ba7b35dda10d8a2bd238aa77411f975ab3226b4[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Nov 12 01:34:01 2020 -0800
+
+    :lipstick: addimg a deffearnet color theme
+
+[33mcommit e75703db62c89c8978eb3bb0274712b45dff99c7[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Nov 12 01:22:22 2020 -0800
+
+    :bug: adding a timer for the report for google analytics to see it
+
+[33mcommit 0277d5013784d02cbf4ec5850e55f3e9edad4965[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 10 22:42:19 2020 -0800
+
+    :bulb: adding new todo
+
+[33mcommit 1abf5785d68edce8e5747ac9ff9e81625fe80a84[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 10 22:38:25 2020 -0800
+
+    📚 docs: adding a todo
+
+[33mcommit 80b8eaa847b3fdaf5d0019b3f8b4da9ab541c9e8[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Nov 10 09:25:34 2020 -0800
+
+    adding the full report sys
+
+[33mcommit 3ffabd221e4dc5d5eea4804127e21a5e82343cb4[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Nov 6 01:59:54 2020 -0800
+
+    add the report btn
+
+[33mcommit 92f442cf6c62a3bebd006c692aa6a7a5379734f0[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 17:48:15 2020 -0700
+
+    back to normal
+
+[33mcommit a92d31465781434a707c3cd81564c3a19b8a1c55[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 17:44:51 2020 -0700
+
+    tag
+
+[33mcommit f6180f751aef14f9a54c17d502cf5e5931c818b0[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 17:40:47 2020 -0700
+
+    ok
+
+[33mcommit 20b19074d7bd12f8f97fc744dd2f241c5a8e3c30[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 17:38:46 2020 -0700
+
+    fixing the actions file
+
+[33mcommit 06ff055f4c23917c55c232dbf678757c38dd59c4[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 17:34:51 2020 -0700
+
+    testing
+
+[33mcommit 07f9bf9c1ba4e121043978f684c0268181fac3fb[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 17:30:23 2020 -0700
+
+    github actions build
+
+[33mcommit b925afc8ec034f1444084924a26d334efcf9fe25[m[33m ([m[1;33mtag: v1.0[m[33m)[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 14:20:52 2020 -0700
+
+    secrit key updated
+
+[33mcommit 6cd46c1031c3868a439b79fa55c166e2c0098a6e[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 14:18:44 2020 -0700
+
+    testing
+
+[33mcommit 30e7ada6661a35e108c4e02d194664a07d418203[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 31 14:14:33 2020 -0700
+
+    fix: auto build netlify hook added
+
+[33mcommit e32d2dda579bff1e25ad12c3f5f6704e2fbf3ec7[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 15:55:48 2020 -0700
+
+    fixing the time
+
+[33mcommit fcb242df38095785ad61112a51bbe0f066b70f29[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 15:53:15 2020 -0700
+
+    time
+
+[33mcommit dc8bc4bac13c3fa634f3ad9577b92e825946f2a5[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 15:52:03 2020 -0700
+
+    time
+
+[33mcommit 18ffba83179de7d3a2d1065554b58f657ed1f338[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 15:48:37 2020 -0700
+
+    moving the githun workflow file to a top level
+
+[33mcommit 31e29b22ce105839f9d4fa22eed0eb4e348d1015[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 15:44:02 2020 -0700
+
+    adding a workflow jop for github to automate the build at 12am every day
+
+[33mcommit 8613ead26a6ac96b857b2ba191846de92b18e88d[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 15:30:15 2020 -0700
+
+    fixing the title tag
+
+[33mcommit 1045fc3a1d831ca810af46cd62bc1c18cf727309[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 30 00:04:21 2020 -0700
+
+    adding google console verify code
+
+[33mcommit ac6f8e2653781549aaa7280e4375261c9e730378[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 20:35:56 2020 -0700
+
+    added more time for the animation
+
+[33mcommit 6a602e43c3b621fe8d1e59e68ce386bc195af58c[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 20:11:42 2020 -0700
+
+    updated the angular.json with the redurects file
+
+[33mcommit bdfc6257101641708da04eb1658289db88c67d93[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 20:02:24 2020 -0700
+
+    moved the redurects file
+
+[33mcommit 2f2e7bf8898f15a37ccba049525d06058121dc85[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 19:57:39 2020 -0700
+
+    fix: the netlify file
+
+[33mcommit 27ae6416565b756cecc9a422dc312528c17ef9a4[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 19:54:20 2020 -0700
+
+    added the deploment settigs file for netlify
+
+[33mcommit a7fb520cbd7fd315044a6f90fa930862986e6870[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 19:53:55 2020 -0700
+
+    added google analytics
+
+[33mcommit 36e79a0d348f8474de28530385865886fb2ec68d[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 18:52:17 2020 -0700
+
+    netlift redirects added for the url
+
+[33mcommit 92ba73f262d61ff01b6ca43a314dd6ec69a252ba[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 18:44:45 2020 -0700
+
+    added seo for list page, fixed some single page stuff
+
+[33mcommit 6e388533a1fefa2345a75281d20f4413b03a0bf5[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Tue Oct 27 17:58:17 2020 -0700
+
+    ton of bugs fixed, the single page routing problem, the console errors cleared, more commented code
+
+[33mcommit e2d6f5abb8d7215b0cecffe96e4a23e23b0e003c[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sun Oct 25 16:41:53 2020 -0700
+
+    added fragment url at single page and added some animation on the homepage and singlepage and the see more btn
+
+[33mcommit ba167825fd4d481c429006e56fb0767ad0902aa2[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sun Oct 25 15:00:32 2020 -0700
+
+    fixed the player resposive
+
+[33mcommit 7b244edcbcebe262909af5d295db055511d72aef[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sun Oct 25 14:41:36 2020 -0700
+
+    the single page has been made added the header and the movie player and now the download section
+
+[33mcommit 1f7ef654708e1115a2f0b0e20a278a46be9ba6d7[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 23 13:48:36 2020 -0700
+
+    somthing
+
+[33mcommit 6f8f70cb4c1c0f3500b9b2887defcde4ea736772[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Thu Oct 22 15:07:04 2020 -0700
+
+    tags is responsive, made the sliders from the wide slider to the small slider and also made them responsive, made the search and made it work and also made it responsive, add the route for single page. made some api req for the data. and made the main api req for each slider.
+
+[33mcommit 080aaa1ff8e005014d0c6b5b8e759efcc749291a[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sun Oct 18 21:49:09 2020 -0700
+
+    added the header and made it responsive and lazy loaded the movies posters
+
+[33mcommit 17c4493b367de83a5d6c40a480894373680528ef[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Sat Oct 17 19:54:18 2020 -0700
+
+    nav, genra are completed
+
+[33mcommit 4943dd9e2add029ff42095f8893f73f97f1427b4[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 16 17:48:51 2020 -0700
+
+    new start
+
+[33mcommit b173db04339757cdf216b6dfaa9e2433e5739d13[m
+Author: NourEldin <lolhack2017@gmail.com>
+Date:   Fri Oct 16 17:29:49 2020 -0700
+
+    initial commit

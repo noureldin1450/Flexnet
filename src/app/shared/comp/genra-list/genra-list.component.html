@@ -4,9 +4,5 @@
         <li *ngFor="let genra of genralist?.tags"><a [routerLink]="genra.link"
                 title="Flexnet {{ genra.name }} Movies">{{ genra.name }} Movies</a>
         </li>
-        <!-- SEO tags -->
-        <li *ngFor="let genra of genralist?.seo"><a [routerLink]="genra.link"
-                title="Flexnet {{ genra.name }} Movies">{{ genra.name }} Movies</a>
-        </li>
     </ul>
 </ng-scrollbar>
