@@ -17,9 +17,8 @@
                     </ng-template>
 
                     <!-- 
-                <ng-template [ngIf]="!MovieData.fushaarid">
-                    <li [class.active]="activeServer === 1" (click)="activeServer = 1">Server 1</li>
-                </ng-template> -->
+                        TODO: make it optional cuz some movies dont have other servers
+                     -->
 
                     <!-- ranging on the servers andd adding btns for every one -->
                     <li *ngFor="let wserver of MovieData.servers; let i = index" 
@@ -43,24 +42,11 @@
                 <span [innerHTML]="MovieData.imdbid | moviePlayer:'vikv'"></span>
             </ng-template>
 
-            <!-- <ng-template [ngIf]="( !MovieData.fushaarid && activeServer === 1)">
-                <ng-template [ngIf]="MovieData.servers[0]">
-                    <span [innerHTML]="MovieData.servers[0] | moviePlayer"></span>
-                </ng-template>
-            </ng-template> -->
-
             <!-- ranging for every server and added its own ifrme with its source -->
             <div *ngFor="let movieiframe of MovieData.servers; let i = index">
                 <span *ngIf="activeServer === i+1" [innerHTML]="movieiframe | moviePlayer"></span>
             </div>
 
-            <!-- <span *ngIf="server === 2" [innerHTML]="MovieData.server2 | moviePlayer"></span>
-
-            <span *ngIf="server === 3" [innerHTML]="MovieData.server3 | moviePlayer"></span>
-
-            <span *ngIf="server === 4" [innerHTML]="MovieData.server4 | moviePlayer"></span>
-
-            <span *ngIf="server === 5" [innerHTML]="MovieData.server5 | moviePlayer"></span> -->
         </div>
 
         <div class="attrib">
@@ -71,8 +57,5 @@
                 <!-- <img src="/assets/images/fushaarlogo.png" width="25px"> -->
             </p>
         </div>
-
-        <p class="warning">!!! Before reporting this content make sure that your internet is good and fast, and try the
-            other servers.</p>
     </div>
 </section>

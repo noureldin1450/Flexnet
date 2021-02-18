@@ -13,19 +13,6 @@
     .container {
         width: 100%;
 
-        .warning {
-            color: $mid-pink-color;
-            font-size: 0.9rem;
-            padding-top: 1rem;
-            width: 100%;
-            text-align: center;
-            font-weight: 600;
-
-            @include mobile {
-                font-size: 12px;
-            }
-        }
-
         .attrib {
             text-align: center;
             background-color: $light-black-color;
