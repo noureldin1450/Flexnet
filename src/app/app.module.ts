@@ -10,6 +10,7 @@ import { GenraListModule } from './shared/comp/genra-list/genra-list.module';
 import { SupportComponent } from './shared/comp/support/support.component';
 import { RequstComponent } from './shared/comp/requst/requst.component';
 import { SeoService } from './shared/services/seo.service';
+import { SplashScreenComponent } from './shared/comp/splash-screen/splash-screen.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SeoService } from './shared/services/seo.service';
     NavComponent,
     SupportComponent,
     RequstComponent,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,

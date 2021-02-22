@@ -4,135 +4,141 @@
     /////////////////////
 */
 //FADE IN ANYMATION
+@keyframes loading {
+  0%{
+    display: flex;
+    opacity: 1;  
+  }
+  to{
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.loading {
+  animation-name: loading;
+}
+
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-    
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .fadeIn {
-    animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-      }
-    
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .fadeInRight {
-    animation-name: fadeInRight;
-    animation-delay: .6s !important;
+  animation-name: fadeInRight;
+  animation-delay: 0.6s !important;
 }
 
-@keyframes support{
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+@keyframes support {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes OutAnimation{
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-      z-index: -5;
-    }
+@keyframes OutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -5;
+  }
 }
-.fadeOutAnimation{
+.fadeOutAnimation {
   animation-name: OutAnimation;
-  animation-duration: .3s !important;
+  animation-duration: 0.3s !important;
   animation-timing-function: ease-in-out;
 }
 
-@keyframes InAnimation{
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-      z-index: 5;
-    }
+@keyframes InAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    z-index: 5;
+  }
 }
-.fadeInAnimation{
+.fadeInAnimation {
   animation-name: InAnimation;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
 
+@keyframes fadeeffect {
+  from {
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $black-color;
+    z-index: 3;
+  }
 
-
-@keyframes fadeeffect{
-    from {
-      opacity: 1;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: $black-color;
-      z-index: 3;
-    }
-    
-    to {
-      opacity: 0 !important;
-      display: none;
-    }
+  to {
+    opacity: 0 !important;
+    display: none;
+  }
 }
 
-.fade-effect{
-    // animation-name: fadeeffect;
-    animation-duration: 1s !important;
-    animation-delay: 2s;
-    animation-timing-function: ease-in-out;
+.fade-effect {
+  // animation-name: fadeeffect;
+  animation-duration: 1s !important;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
 }
 
 .supportAnim {
-    animation-name: support;
-    animation-delay: 7s !important;
+  animation-name: support;
+  animation-delay: 7s !important;
 }
 
-.fast{
-  animation-delay: .5s;
+.fast {
+  animation-delay: 0.5s;
 }
-.slow{
-  animation-delay: .7s;
+.slow {
+  animation-delay: 0.7s;
 }
-.slower{
-  animation-delay: .9s;
+.slower {
+  animation-delay: 0.9s;
 }
-.delay-1{
+.delay-1 {
   animation-delay: 1s;
 }
-.delay-1-5{
+.delay-1-5 {
   animation-delay: 1.5s;
 }
-.delay-2{
+.delay-2 {
   animation-delay: 2s;
 }
 .animated {
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   animation-fill-mode: both;
 }
-
-
-
-
-
-
