@@ -7,19 +7,19 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavComponent } from './shared/comp/nav/nav.component';
 import { GenraListModule } from './shared/comp/genra-list/genra-list.module';
-import { SupportComponent } from './shared/comp/support/support.component';
 import { RequstComponent } from './shared/comp/requst/requst.component';
 import { SeoService } from './shared/services/seo.service';
 import { SplashScreenComponent } from './shared/comp/splash-screen/splash-screen.component';
+import { FooterComponent } from './shared/comp/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    SupportComponent,
     RequstComponent,
     SplashScreenComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

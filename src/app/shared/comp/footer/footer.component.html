@@ -1,0 +1,36 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__info">
+            <p>
+                Flexnet Made with love
+                <svg class="ion-icon">
+                    <use xlink:href="./assets/icons.svg#icon-heart"></use>
+                </svg>
+                in Egypt by
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100008415793133">NourEldin</a>
+            </p>
+        </div>
+        <div class="footer__links">
+            <ul>
+                <ng-container *ngFor="let link of footerLinks">
+                    <!-- looping throw the links -->
+
+                    <!-- the template of the links that are not external -->
+                    <ng-template [ngIf]="link.external == false" [ngIfElse]="ExternalLink">
+                        <li *ngIf='link.external == false'>
+                            <a [routerLink]="link.route">{{ link.name }}</a>
+                        </li>
+                    </ng-template>
+
+                    <!-- the template of the links that are external -->
+                    <ng-template #ExternalLink>
+                        <li *ngIf='link.external == true'>
+                            <a [href]="link.route" target="_blank">{{ link.name }}</a>
+                        </li>
+                    </ng-template>
+
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</footer>

@@ -14,17 +14,24 @@
         a{
             color: $white-color;
             background-color: $light-black-color;
-            padding: .3rem 1rem;
+            padding: 0.4rem 2rem;
             text-transform: capitalize;
             font-size: 1.1rem;
-            font-weight: 900;
+            font-weight: 500;
             border-radius: 5px;
+            transition: .3s;
+            
+            &:hover{
+                transition: .3s;
+                background: $dark-pink-color;
+            }
 
             @include small-tap{
                 font-size: 1rem;
             }
             @include mobile{
                 font-size: .9rem;
+                padding: 0.4rem 1.7rem;
             }
             @include mini-mobile{
                 font-size: 14px;

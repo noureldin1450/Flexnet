@@ -10,17 +10,25 @@ import { MoviePlayerComponent } from './movie-player/movie-player.component';
 import { PlyrModule } from 'ngx-plyr';
 import { DownloadComponent } from './download/download.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { SupportComponent } from '../shared/comp/support/support.component'
 
-const routes:Routes = [
+const routes: Routes = [
   {
-    path: '', 
+    path: '',
     component: SinglePageComponent
   }
 ]
 
 
 @NgModule({
-  declarations: [SinglePageComponent, MovieHeaderComponent, MoviePlayerComponent, DownloadComponent, ReportComponent],
+  declarations: [
+    SinglePageComponent,
+    MovieHeaderComponent,
+    MoviePlayerComponent,
+    DownloadComponent,
+    SupportComponent,
+    ReportComponent
+  ],
   imports: [
     CommonModule,
     SmallCardModule,
@@ -32,6 +40,6 @@ const routes:Routes = [
     }),
     RouterModule.forChild(routes)
   ],
-  exports:[RouterModule, NgScrollbarModule]
+  exports: [RouterModule, NgScrollbarModule]
 })
 export class SinglePageModule { }

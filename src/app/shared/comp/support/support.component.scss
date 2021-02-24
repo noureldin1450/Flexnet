@@ -51,8 +51,9 @@ h3,
             }
 
             .ion-icon {
-                width: 20px;
+                width: 17px;
                 margin-left: 0.3rem;
+                fill: $white-color;
 
                 @include tap{
                     display: none;
