@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/router';
+import { PrivacyPageComponent } from './shared/comp/privacy-page/privacy-page.component';
 import { RequstComponent } from './shared/comp/requst/requst.component';
 
 const routerOptions: ExtraOptions = {
@@ -39,6 +40,10 @@ const routes: Routes = [
     data:{
       route: 'tagspage'
     }
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPageComponent
   },
   {
     path:'**', redirectTo: '' 

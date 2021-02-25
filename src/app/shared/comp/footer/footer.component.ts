@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
   
   footerLinks:any[] = [
-    { 'external': false, 'route': '#', 'name': 'privacy policy'},
+    { 'external': false, 'route': 'privacy-policy', 'name': 'privacy policy'},
     { 'external': true, 'route': 'https://www.buymeacoffee.com/yuvNMQfC7', 'name': 'Support us'},
     { 'external': true, 'route': 'https://www.facebook.com/profile.php?id=100008415793133', 'name': 'Contact me'}
   ]

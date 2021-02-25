@@ -1,0 +1,31 @@
+@import '../../../../assets/style/scss/global';
+
+.privacy-policy{
+    text-align: center;
+
+    &__info{
+        margin: 4rem 0px;
+        
+        h1{   
+            text-transform: capitalize;
+            margin-bottom: .2rem;
+        }//heading
+
+        p{
+            opacity: .8;
+            max-width: 700px;
+            margin: 0 auto;
+            
+            @include tap{
+                font-size: .9rem;
+            }
+        }//the paragraph
+    }//info section
+
+    &__warning{
+        font-size: .9rem;
+        max-width: 500px;
+        color: $orange-color;
+        margin: 0 auto;
+    }//orange warning message end
+}

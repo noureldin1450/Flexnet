@@ -2,7 +2,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { filter } from 'rxjs/operators';
-import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
+// import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
 
 declare var gtag;
 
