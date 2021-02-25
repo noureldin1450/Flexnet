@@ -1,7 +1,8 @@
 <!-- this is movie player -->
 <section class="movie-player" [attr.id]="'movieplayer'" *ngIf="MovieData">
     <div class="container">
-        <div class="servers animated fadeIn delay-1">
+
+        <div class="servers animated fadeIn delay-1" *ngIf="MovieData.servers.length > 0">
             <ng-scrollbar class="my-scrollbar">
                 <ul *ngIf="MovieData.servers">
 
@@ -15,11 +16,6 @@
                             Premium S1
                         </li>
                     </ng-template>
-
-                    <!-- 
-                        TODO: make it optional cuz some movies dont have other servers
-                     -->
-
                     <!-- ranging on the servers andd adding btns for every one -->
                     <li *ngFor="let wserver of MovieData.servers; let i = index" 
                         [class.active]="activeServer === i+1"
@@ -28,7 +24,7 @@
 
                 </ul>
             </ng-scrollbar>
-        </div>
+        </div> <!-- servers scroll div -->
 
         <div id="movie-player" class="animated fadeIn delay-1-5">
 
@@ -54,11 +50,10 @@
                 <app-report></app-report>
             </div>
             <p>support us by sharing the movie with your friends and family
-                <!-- <img src="/assets/images/fushaarlogo.png" width="25px"> -->
             </p>
-        </div>
-    </div>
-    
+        </div> <!-- the end of the attrib div -->
+    </div> <!-- this the end of the movie div -->
+
     <!-- the support section -->
     <app-support></app-support>
 </section>
