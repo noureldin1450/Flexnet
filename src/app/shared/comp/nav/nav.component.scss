@@ -1,23 +1,24 @@
 @import "../../../../assets/style/scss/global";
 
-:host{
-    .container{
-        @include tap{
+:host {
+    .container {
+        @include tap {
             width: 100%;
         }
     }
 }
 
-#small{
-    display: none;
+.view-on-tap {
+    display: none !important;
 
-    @include tap{
-        display: inline-flex;
+    @include tap {
+        display: inline-flex !important;
     }
 }
-#search-icon{
-    @include tap{
-        display: none;
+
+.remove-on-tap {
+    @include tap {
+        display: none !important;
     }
 }
 
@@ -32,7 +33,7 @@
     box-shadow: 8px 3px 10px rgba(0, 0, 0, 0.25);
 
     @include tap {
-        width: 100% !important; 
+        width: 100% !important;
         z-index: 5;
         max-width: 100%;
         position: fixed;
@@ -42,7 +43,6 @@
     &__logo {
         width: 100%;
         margin: 0px auto;
-        padding: 1.7rem 0px;
         background: $dark-pink-color;
         border-top-left-radius: $normal-radius;
         border-top-right-radius: $normal-radius;
@@ -56,10 +56,11 @@
 
         a {
             height: 35px;
-            width: 50px;
+            width: 80%;
             display: block;
-            background-image: url("/assets/logo.png");
-            background-size: cover;
+            padding: 1.6rem 0px;
+            background-image: url("/assets/images/white-logo.png");
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
         } //the main img tag for the logo
@@ -67,7 +68,11 @@
 
     &__links {
         li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 2.5rem;
+
             &:first-of-type {
                 margin-top: 2.5rem;
 
@@ -76,9 +81,28 @@
                 }
             }
 
+            a {
+
+                @include tap{
+                    padding: 0.9rem 0px .3rem 0px;
+                }
+
+                &.active {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.7rem 0px;
+                    border-right: 4px solid #8b325e;
+
+                    @include tap {
+                        border-right: none;
+                        border-bottom: 4px solid #8b325e;
+                    }
+                }
+            }
+
             @include tap {
                 margin: 0;
-                padding: 1.2rem 0px .7rem 0px;
                 width: calc(100% / 3.1);
                 display: inline-flex;
                 align-items: center;
@@ -86,14 +110,9 @@
             }
         }
         .ion-icon {
-            transform: scale(1.2);
-            opacity: 0.7;
-            transition: 0.4s;
-            &:hover {
-                transform: scale(1.5);
-                transition: 0.4s;
-                fill: $light-pink-color;
-            }
+            fill: $white-color;
+            width: 26px;
+            height: 26px;
 
             @include tap {
                 width: 26px;
@@ -102,8 +121,13 @@
         } //all the icons inside the nav
 
         .active {
-            fill: $mid-pink-color;
+            background: $white-color;
             opacity: 1;
-        }
+            width: 100%;
+
+            .ion-icon {
+                fill: $dark-pink-color;
+            }
+        } //the active state based on the url
     }
 } //the nav element
