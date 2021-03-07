@@ -14,6 +14,10 @@ export class ApiService {
   FORMAT: string = '/index.json';
 
 
+  SiteMapData(){
+    return this.http.get(`${this.HEADERS}${this.APIURL}sitemap.json`);
+  }
+
   LatestMoviesData() {
     return this.http.get(`${this.HEADERS}${this.APIURL}movies.json`);
   }

@@ -1,3 +1,4 @@
+import { SitemapPageComponent } from './shared/comp/sitemap-page/sitemap-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/router';
 import { PrivacyPageComponent } from './shared/comp/privacy-page/privacy-page.component';
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'privacy-policy',
     component: PrivacyPageComponent
+  },
+  {
+    path: 'sitemap',
+    component: SitemapPageComponent
   },
   {
     path:'**', redirectTo: '' 

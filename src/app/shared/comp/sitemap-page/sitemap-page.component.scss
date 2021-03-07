@@ -1,0 +1,31 @@
+@import '../../../../assets/style/scss/global';
+
+.sitemap{
+    text-align: center;
+    margin: 3rem 0px 1rem 0px;
+
+    &__MoviesCount{
+        font-weight: 500;
+        margin: .5rem 0px 1rem 0px;
+
+        span{
+            color: $orange-color;
+            font-weight: 700;
+        }
+    }
+
+    &__MoviesList{
+        li{
+            display: inline-block;
+            padding: .5rem 0.7rem;
+
+            a{
+                text-decoration: underline;
+                
+                @include small-tap{                    
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+}

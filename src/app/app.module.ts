@@ -11,6 +11,7 @@ import { RequstComponent } from './shared/comp/requst/requst.component';
 import { SeoService } from './shared/services/seo.service';
 import { SplashScreenComponent } from './shared/comp/splash-screen/splash-screen.component';
 import { FooterComponent } from './shared/comp/footer/footer.component';
+import { SitemapPageComponent } from './shared/comp/sitemap-page/sitemap-page.component';
 import { PrivacyPageComponent } from './shared/comp/privacy-page/privacy-page.component';
 
 
@@ -21,7 +22,8 @@ import { PrivacyPageComponent } from './shared/comp/privacy-page/privacy-page.co
     RequstComponent,
     SplashScreenComponent,
     FooterComponent,
-    PrivacyPageComponent,
+    SitemapPageComponent,
+    PrivacyPageComponent
   ],
   imports: [
     BrowserModule,

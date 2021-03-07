@@ -1,0 +1,15 @@
+
+
+<div class="sitemap">
+
+    <h1> Flexnet SiteMap </h1>
+
+    <h2 class="sitemap__MoviesCount"> Flexnet Contain <span>{{ SitemapData?.Moviescount }}</span> Movie 😎</h2>
+
+    <ul class="sitemap__MoviesList">
+        <li *ngFor="let movie of SitemapData?.sitemap; let i = index">
+            <a title="{{ movie.title }} Movie" [href]="movie.slug">{{ movie.title }}</a>
+        </li>
+    </ul>
+
+</div>
