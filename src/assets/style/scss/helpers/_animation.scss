@@ -18,6 +18,21 @@
   animation-name: loading;
 }
 
+@keyframes glow {
+  from{
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0);
+  }
+  50%{
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.4); 
+  }
+  to{
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0);
+  }
+}
+.glow {
+  animation-name: glow;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

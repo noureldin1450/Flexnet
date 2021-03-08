@@ -1,7 +1,5 @@
 @import "../../../assets/style/scss/global";
 
-
-
 .card {
     height: 60vh !important;
     min-height: 400px !important;
@@ -24,50 +22,68 @@
         text-align: center;
         margin: 0 !important;
 
-        &__play,
         &__details {
-            background-color: rgba(18, 18, 18, 0.7);
-            font-size: 15px;
-            font-weight: 900;
-            width: 100%;
-            padding: 0.4rem 0px;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            position: absolute;
-            transition: 0.7s;
-            p,
-            p a,
-            p a .icon-icon{
-                fill: rgb(250, 250, 250);//to make it more white
-            }//the p and a and the icon
-        }//for both the divs 
-
+            background: linear-gradient(0deg, #121212 -4.65%, rgba(18, 18, 18, 0) 35.9%);
+            border-bottom: 4px solid $dark-pink-color;
+        }
         &__play {
             opacity: 0;
-            animation-name: OutAnimation;
-            animation-duration: .3s;
-            background-color: rgb(139, 50, 94, .8);
-            
+            animation-duration: 0.3s;
+            background: linear-gradient(0deg, $dark-pink-color 9.04%, rgba(18, 18, 18, 0) 37.9%);
+            border-bottom: 4px solid white;
+
             p {
-                a{
+                a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     .ion-icon {
+                        display: none;
                         height: 20px;
+
+                        @include tap{
+                            display: flex;
+                        }
                     }
                 }
             }
         }
 
-        &:hover .movie__play {
-            animation-name: InAnimation;
-            animation-timing-function: ease-in-out;
-        }
+        &__play,
+        &__details {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 900;
+            width: 100%;
+            height: 100%;
+            padding: 0.4rem 0px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            position: absolute;
+            transition: .6s;
+
+            p,
+            p a,
+            p a .icon-icon {
+                fill: $white-color; //to make it more white
+                animation-duration: 2s;
+                animation-fill-mode: both;
+                animation-timing-function: cubic-bezier(0.4, 0, 1, 1);                
+                animation-iteration-count: infinite;
+                animation-name: glow;
+            } //the p and a and the icon
+        } //for both the divs
+
         &:hover .movie__details {
-            animation-name: OutAnimation;
-            animation-duration: .3s;
-            animation-timing-function: ease-in-out;
+            opacity: 0;
+            transition: .4s;
+        }
+
+        &:hover .movie__play {
+            opacity: 1;
+            transition: .4s;
         }
     }
 }
