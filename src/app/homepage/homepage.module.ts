@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { WideCardModule } from '../shared/comp/wide-card/wide-card.module';
 import { SmallCardModule } from '../shared/comp/small-card/small-card.module';
 import { RandommovieModule } from '../shared/comp/randommovie/randommovie.module';
+import { LoaderComponent } from '../shared/comp/loader/loader.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomepageComponent,
-    SearchComponent
+    SearchComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,6 @@ const routes: Routes = [
     WideCardModule,
     RouterModule.forChild(routes)
   ],
-  exports:[RouterModule]
+  exports:[RouterModule,LoaderComponent]
 })
 export class HomepageModule { }

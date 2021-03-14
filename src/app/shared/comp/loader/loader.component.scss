@@ -1,0 +1,28 @@
+@import '../../../../assets/style/scss/_global.scss';
+
+.loader{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h3{
+        font-size: 1.6rem;
+        padding-bottom: 1rem;
+        text-align: center;
+
+        @include tap{
+            font-size: 1.2rem;
+        }
+    }
+    img{
+        width: 100px;
+        opacity: .7;
+
+        @include large-tap{
+            width: 80px;
+        }
+    }
+}

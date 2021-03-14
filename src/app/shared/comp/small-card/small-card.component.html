@@ -3,18 +3,41 @@
     <swiper [config]="config">
 
         <div class="card" *ngFor="let movie of MoviesData.slice(0, amount || 30)">
-            <a class="card__poster" [routerLink]='movie.slug' [errorImage]="errorimage" [defaultImage]="defaultimage"
-                [lazyLoad]="movie.moviecover" title="Flexnet Watch {{movie.title}}">
-            </a>
+            
+            <div class="card__rating">
+                <svg class="ion-icon"><use xlink:href="./assets/icons.svg#icon-star"></use></svg>
+                <p>{{ movie.rating }}/10</p>
+            </div>
+
+            <div class="card__poster" [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover">
+                <a class="card__poster__mobile__cta" [routerLink]='movie.slug' title="Flexnet Watch {{movie.title}}">
+                    <svg class="ion-icon">
+                        <use xlink:href="./assets/icons.svg#icon-play"></use>
+                    </svg>
+                </a>
+                <div class="card__poster__overlay">
+                    <a class="card__poster__cta" [routerLink]='movie.slug' title="Flexnet Watch {{movie.title}}">watch now</a>
+                </div>
+            </div>
 
             <div class="card__info">
                 <h4>{{ movie.title | truncate:[20] }}</h4>
                 <ul>
-                    <li *ngIf="movie.year">
-                        {{ movie.year }} - {{ movie.rating }}/10
+                    <li *ngIf="movie.duration">
+                        <svg class="ion-icon">
+                            <use xlink:href="./assets/icons.svg#icon-time"></use>
+                        </svg>
+                        <p>
+                            {{ movie.duration }}
+                        </p>
                     </li>
-                    <li *ngIf="!movie.year">
-                        {{ movie.rating }}/10
+                    <li *ngIf="movie.pg">
+                        <svg class="ion-icon">
+                            <use xlink:href="./assets/icons.svg#icon-pg"></use>
+                        </svg>
+                        <p>
+                            PG-{{ movie.pg }}
+                        </p>
                     </li>
                 </ul>
             </div>

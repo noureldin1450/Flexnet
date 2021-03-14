@@ -1,5 +1,11 @@
 
-
+ <!-- 
+     Loader
+ -->    
+<app-loader *ngIf="!BoxofficeMoviesData" [text]="'Box Office Movies'"></app-loader> 
+<app-loader *ngIf="!LatestMovies" [text]="'Latest Movies'"></app-loader> 
+<app-loader *ngIf="!GenraList" [text]="'Genra Movies'"></app-loader> 
+ 
 <!-- 
     Header Code
  -->
@@ -12,7 +18,7 @@
 
 <!--
     LATEST MOVIES
--->
+--> 
 <div class="animated fadeIn delay-2">
 
     <ng-container *ngIf="WindowSize > 500">
