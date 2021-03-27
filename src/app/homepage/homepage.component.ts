@@ -46,7 +46,7 @@ export class HomepageComponent implements OnInit {
     console.log('Getting Genralist Data...');
     this.api.GenraList().subscribe(data => {
       this.GenraList = data;
-    })
+    });
 
     console.log('Getting Boxoffice Movies Data...');
     this.api.BoxofficeMovies(2020).subscribe(data => {

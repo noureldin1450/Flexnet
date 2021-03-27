@@ -23,7 +23,7 @@ import { PrivacyPageComponent } from './shared/comp/privacy-page/privacy-page.co
     SplashScreenComponent,
     FooterComponent,
     SitemapPageComponent,
-    PrivacyPageComponent,
+    PrivacyPageComponent
   ],
   imports: [
     BrowserModule,
