@@ -1,2 +1,4 @@
 
+
+<app-loader *ngIf="!GenraMovies" [text]="genra + ' Movies'"></app-loader>
 <app-small-card *ngIf="GenraMovies" [MoviesData]="GenraMovies" [title]="'Flexnet ' + genra + ' Movies'" [amount]="200"></app-small-card>

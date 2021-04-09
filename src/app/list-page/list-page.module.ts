@@ -1,3 +1,4 @@
+import { LoaderModule } from './../shared/comp/loader/loader.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListPageComponent } from './list-page.component';
@@ -21,6 +22,7 @@ const routes:Routes = [
   imports: [
     CommonModule,
     SmallCardModule,
+    LoaderModule,
     RouterModule.forChild(routes)
   ],
   exports:[RouterModule]

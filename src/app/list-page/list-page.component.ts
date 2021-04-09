@@ -23,6 +23,7 @@ export class ListPageComponent implements OnInit{
       this.genra = this.route.snapshot.params.tag;
 
       console.log('Req the new data...');
+      this.GenraMovies = null;
       this.api.GenraData(this.genra).subscribe(data =>{
         this.GenraMovies = data;
       });
