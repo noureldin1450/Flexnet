@@ -18,6 +18,9 @@ export class SearchComponent implements OnInit {
   constructor(private api:ApiService, public router:Router) {}
 
   ngOnInit(): void {
+  }
+
+  loadslugs(){
     this.api.SlugsData().subscribe(data =>{
       this.Slugs = data;
     })

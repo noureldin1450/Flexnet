@@ -1,7 +1,7 @@
 
-<form [attr.id]="'search'" *ngIf="Slugs" [class.active]="router.url === '/#search'" class="search animated fadeIn fast">
+<form [attr.id]="'search'" [class.active]="router.url === '/#search'" class="search animated fadeIn fast">
     
-    <input [(ngModel)]="moviename" list="movies-names" name="search" type="text" placeholder="Movie Name" title="Add your movie name to search">
+    <input (click)="loadslugs()" [(ngModel)]="moviename" list="movies-names" name="search" type="text" placeholder="Movie Name" title="Add your movie name to search">
 
     <button (click)="search()">
         <svg class="ion-icon">
