@@ -2,7 +2,7 @@
     <h1 class="slider-title">{{ title }}</h1>
     
     <swiper [config]="config" *ngIf='WindowSize > 770'>
-        <a *ngFor="let movie of MoviesData.slice(0,20)" class="card" title="Flexnet Watch {{movie.title}}" [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover">
+        <div *ngFor="let movie of MoviesData.slice(0,20)" class="card" title="Flexnet Watch {{movie.title}}" [errorImage]="errorimage" [defaultImage]="defaultimage" [lazyLoad]="movie.moviecover">
             <div class="movie">
                 <div class="animated movie__details">
                     <p> 
@@ -18,7 +18,7 @@
                     </p>
                 </div>
             </div>
-        </a>
+        </div>
     </swiper>
     
     <swiper [config]="config" *ngIf='WindowSize <= 770'>
