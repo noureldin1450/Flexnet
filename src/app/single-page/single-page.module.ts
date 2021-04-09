@@ -1,3 +1,4 @@
+import { LoaderModule } from './../shared/comp/loader/loader.module';
 import { ReportComponent } from './../shared/comp/report/report.component';
 import { SmallCardModule } from './../shared/comp/small-card/small-card.module';
 import { Routes, RouterModule } from '@angular/router';
@@ -34,6 +35,7 @@ const routes: Routes = [
     SmallCardModule,
     RouterModule,
     PlyrModule,
+    LoaderModule,
     PipesModule,
     NgScrollbarModule.withConfig({
       track: 'horizontal',

@@ -1,6 +1,9 @@
 
 
 <ng-template [ngIf]="!notfound" [ngIfElse]="error">
+
+    <app-loader *ngIf="!MovieData" [text]="'Movie'"></app-loader>
+
     <app-movie-header *ngIf="MovieData" [MovieData]="MovieData"></app-movie-header>
     
     <app-movie-player *ngIf="MovieData" [MovieData]="MovieData"></app-movie-player>
