@@ -10,6 +10,8 @@
     </button>
 
     <datalist id="movies-names">
-        <option *ngFor="let slug of Slugs.slugs" [value]="slug"></option>
+        <ng-container *ngIf="Slugs">
+            <option *ngFor="let slug of Slugs.slugs" [value]="slug"></option>
+        </ng-container>
     </datalist>
 </form>

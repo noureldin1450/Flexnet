@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  Slugs:any;
+  Slugs:any = null;
   path:string = "/movies/";
   moviename:string;
   url:string;
