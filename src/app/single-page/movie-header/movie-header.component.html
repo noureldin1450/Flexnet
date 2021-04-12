@@ -6,7 +6,7 @@
             <div class="container">
                 <h2>{{ MovieData?.title }}</h2>
                 <p>{{ MovieData?.story | truncate:[200] }}</p>
-                <div class="trailer" [innerHTML]="MovieData?.trailer | trailer"></div>
+                <div class="trailer" [innerHTML]="Trailer | trailer"></div>
     
                 <div class="btn">
                     <a [routerLink]="'.'" [fragment]="'movie-player'" title="Flexnet Watch {{MovieData?.title}}">

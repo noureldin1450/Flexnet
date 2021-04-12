@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-movie-header',
@@ -6,13 +6,18 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./movie-header.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MovieHeaderComponent implements OnInit {
+export class MovieHeaderComponent implements OnChanges{
 
   @Input() MovieData:any;
+  
+  Trailer:string;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(Changes: SimpleChanges){
+    this.Trailer = `https://www.youtube.com/embed/${Changes.MovieData.currentValue?.trailer}`;
+    console.log('Done making the trailer with the Id of', this.Trailer);
   }
 
 }
+
